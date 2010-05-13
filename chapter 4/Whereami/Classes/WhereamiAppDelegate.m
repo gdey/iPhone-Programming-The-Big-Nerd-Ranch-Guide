@@ -17,17 +17,46 @@
 
 #pragma mark -
 #pragma mark Application Delegate Methods 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    // Override point for customization after application launch
+        // Create location manager object -
+    locationManager = [[CLLocationManager alloc] init];
+    
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    if ([locationManager headingAvailable]) {
+        [locationManager setHeadingFilter:kCLHeadingFilterNone];
+        [locationManager startUpdatingHeading];
+    } else {
+        NSLog(@"Heading is not supported on this device.");
+    }
+
     [window makeKeyAndVisible];
+    return YES;
 }
 
+#pragma mark -
+#pragma mark LocationManager Delegate Methods
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"Could not find locaiton %@",error);
+}
 
+- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    NSLog(@" moving to: %@",newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+    NSLog(@" new heading is: %@",newHeading);
+}
 #pragma mark -
 #pragma mark Memory Management Methods
 - (void)dealloc {
     [window release];
+    [locationManager setDelegate:nil];
+    [locationManager release];
     [super dealloc];
 }
 
