@@ -1,5 +1,19 @@
 // !$*UTF8*$!
 {
+	1D3623240D0F684500981E51 /* QuizAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 533}}";
+			sepNavSelRange = "{385, 0}";
+			sepNavVisRange = "{162, 606}";
+		};
+	};
+	1D3623250D0F684500981E51 /* QuizAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 1248}}";
+			sepNavSelRange = "{553, 0}";
+			sepNavVisRange = "{134, 738}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* Quiz */ = {
 		activeExec = 0;
 		executables = (
@@ -20,7 +34,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					341,
+					828,
 					20,
 					48.16259765625,
 					43,
@@ -40,6 +54,11 @@
 			PBXPerProjectTemplateStateSaveDate = 295416482;
 			PBXWorkspaceStateSaveDate = 295416482;
 		};
+		perUserProjectItems = {
+			7AF385C2119BFE3200B93A24 /* PBXTextBookmark */ = 7AF385C2119BFE3200B93A24 /* PBXTextBookmark */;
+			7AF385C3119BFE3200B93A24 /* XCBuildMessageTextBookmark */ = 7AF385C3119BFE3200B93A24 /* XCBuildMessageTextBookmark */;
+			7AF385CF119C01F800B93A24 /* PBXTextBookmark */ = 7AF385CF119C01F800B93A24 /* PBXTextBookmark */;
+		};
 		sourceControlManager = 7AF385AC119BB2A500B93A24 /* Source Control */;
 		userBuildSettings = {
 		};
@@ -51,7 +70,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -60,6 +79,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -67,6 +87,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = Quiz;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
@@ -84,5 +106,34 @@
 	7AF385AD119BB2A500B93A24 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	7AF385C2119BFE3200B93A24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* QuizAppDelegate.h */;
+		name = "QuizAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 385;
+		rType = 0;
+		vrLen = 606;
+		vrLoc = 162;
+	};
+	7AF385C3119BFE3200B93A24 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected identifier before 'OBJC_STRING' token";
+		fRef = 1D3623250D0F684500981E51 /* QuizAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 24;
+		rType = 1;
+	};
+	7AF385CF119C01F800B93A24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* QuizAppDelegate.m */;
+		name = "QuizAppDelegate.m: 25";
+		rLen = 0;
+		rLoc = 553;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 134;
 	};
 }

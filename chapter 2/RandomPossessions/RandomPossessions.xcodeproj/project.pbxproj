@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AF38600119C080000B93A24 /* Possession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF385FF119C080000B93A24 /* Possession.m */; };
 		8DD76F9A0486AA7600D96B5E /* RandomPossessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* RandomPossessions.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* RandomPossessions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* RandomPossessions.1 */; };
@@ -29,6 +30,8 @@
 		08FB7796FE84155DC02AAC07 /* RandomPossessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPossessions.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* RandomPossessions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPossessions_Prefix.pch; sourceTree = "<group>"; };
+		7AF385FE119C080000B93A24 /* Possession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Possession.h; path = Class/Possession.h; sourceTree = "<group>"; };
+		7AF385FF119C080000B93A24 /* Possession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Possession.m; path = Class/Possession.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* RandomPossessions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomPossessions; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* RandomPossessions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomPossessions.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +62,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7AF385FE119C080000B93A24 /* Possession.h */,
+				7AF385FF119C080000B93A24 /* Possession.m */,
 				32A70AAB03705E1F00C91783 /* RandomPossessions_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* RandomPossessions.m */,
 			);
@@ -133,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* RandomPossessions.m in Sources */,
+				7AF38600119C080000B93A24 /* Possession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
