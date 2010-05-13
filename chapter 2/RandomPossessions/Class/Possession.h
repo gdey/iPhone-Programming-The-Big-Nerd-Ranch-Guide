@@ -22,4 +22,12 @@
 @property (copy) NSNumber *valueInDollars;
 @property (retain, readonly) NSDate   *dateCreated;
 
++ (id) randomPossession;
+
+- (id) initWithPossessionName:(NSString *)name;
+- (id) initWithPossessionName:(NSString *)name
+               valueInDollars:(NSNumber *)value
+              andSerialNumber:(NSString *) snumber;
+    
+
 @end
