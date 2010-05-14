@@ -8,11 +8,17 @@
 
 #import "WhereamiAppDelegate.h"
 
+
+
 @implementation WhereamiAppDelegate
 
 #pragma mark -
 #pragma mark synthesize
 @synthesize window;
+@synthesize mapView;
+@synthesize activityIndicator;
+@synthesize locationTitleField;
+
 
 
 #pragma mark -
@@ -26,7 +32,8 @@
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [locationManager startUpdatingLocation];
+        //    [locationManager startUpdatingLocation];
+    [[self mapView] setShowsUserLocation:YES];
     if ([locationManager headingAvailable]) {
         [locationManager setHeadingFilter:kCLHeadingFilterNone];
         [locationManager startUpdatingHeading];
@@ -36,6 +43,15 @@
 
     [window makeKeyAndVisible];
     return YES;
+}
+
+#pragma mark -
+#pragma mark MapView Delegate Methods
+- (void)mapView:(MKMapView *)aMapView didAddAnnotationViews:(NSArray *)views {
+    MKAnnotationView *annotationView = [views objectAtIndex:0];
+    id <MKAnnotation> mp = [annotationView annotation];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 50);
+    [aMapView setRegion:region animated:YES];
 }
 
 #pragma mark -
@@ -57,6 +73,9 @@
     [window release];
     [locationManager setDelegate:nil];
     [locationManager release];
+    [self setMapView:nil];
+    [self setActivityIndicator:nil];
+    [self setLocationTitleField:nil];
     [super dealloc];
 }
 
