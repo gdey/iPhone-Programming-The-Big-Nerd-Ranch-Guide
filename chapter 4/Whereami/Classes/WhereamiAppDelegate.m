@@ -18,6 +18,8 @@
 @synthesize mapView;
 @synthesize activityIndicator;
 @synthesize locationTitleField;
+@synthesize stateLabel;
+@synthesize cityLabel;
 
 
 #pragma mark -
@@ -34,6 +36,14 @@
     [activityIndicator stopAnimating];
     [locationTitleField setHidden:NO];
     [locationManager stopUpdatingLocation];
+}
+
+#pragma mark -
+#pragma mark IB Actions
+
+- (IBAction) changeMapView:(id)sender {
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    [mapView setMapType:[control selectedSegmentIndex]];
 }
 
 #pragma mark -
@@ -94,12 +104,37 @@
     MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[newLocation coordinate] andTitle:[locationTitleField text]];
     [mapView addAnnotation:mp];
     [mp release];
+    if( reverseGeocoder != nil ){
+        [reverseGeocoder cancel];
+        [reverseGeocoder release];
+        reverseGeocoder = nil;
+    }
+    reverseGeocoder = [[MKReverseGeocoder alloc] initWithCoordinate:[newLocation coordinate]];
+    [reverseGeocoder setDelegate:self];
+    [reverseGeocoder start];
     [self foundLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
     NSLog(@" new heading is: %@",newHeading);
 }
+
+#pragma mark -
+#pragma mark MKReverseGeocoderDelegate Methods
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error {
+    NSLog(@"Could not find reverse info");
+}
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
+    NSLog(@"Setting labels to: %@, %@",[placemark locality], [placemark administrativeArea]);
+    [[self stateLabel] setText:[placemark administrativeArea]];
+    [[self stateLabel] setHidden:NO];
+    [[self cityLabel] setText:[placemark locality]];
+    [[self cityLabel] setHidden:NO];
+    [reverseGeocoder release];
+    reverseGeocoder = nil;
+}
+
+
 #pragma mark -
 #pragma mark Memory Management Methods
 - (void)dealloc {
@@ -109,6 +144,13 @@
     [self setMapView:nil];
     [self setActivityIndicator:nil];
     [self setLocationTitleField:nil];
+    if (reverseGeocoder != nil ) {
+        if ([reverseGeocoder isQuerying]) {
+            [reverseGeocoder cancel];
+        }
+        [reverseGeocoder release];
+        reverseGeocoder = nil;
+    }
     [super dealloc];
 }
 
