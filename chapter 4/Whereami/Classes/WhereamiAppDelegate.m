@@ -7,7 +7,7 @@
 //
 
 #import "WhereamiAppDelegate.h"
-
+#import "MapPoint.h"
 
 
 @implementation WhereamiAppDelegate
@@ -20,6 +20,21 @@
 @synthesize locationTitleField;
 
 
+#pragma mark -
+#pragma mark Methods
+
+- (void) findLocation {
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
+    [locationTitleField setHidden:YES];
+}
+
+- (void) foundLocation {
+    [locationTitleField setText:@""];
+    [activityIndicator stopAnimating];
+    [locationTitleField setHidden:NO];
+    [locationManager stopUpdatingLocation];
+}
 
 #pragma mark -
 #pragma mark Application Delegate Methods 
@@ -54,6 +69,16 @@
     [aMapView setRegion:region animated:YES];
 }
 
+
+#pragma mark -
+#pragma mark TextView Delegate Methods
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [self findLocation];
+    [textField resignFirstResponder];
+    return YES;
+}
+
 #pragma mark -
 #pragma mark LocationManager Delegate Methods
 - (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -62,6 +87,14 @@
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     NSLog(@" moving to: %@",newLocation);
+    NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
+    if( t < -180 ){
+        return; // cache data
+    }
+    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[newLocation coordinate] andTitle:[locationTitleField text]];
+    [mapView addAnnotation:mp];
+    [mp release];
+    [self foundLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
