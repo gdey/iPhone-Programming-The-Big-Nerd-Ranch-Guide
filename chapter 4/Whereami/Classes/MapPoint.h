@@ -13,11 +13,14 @@
 @interface MapPoint : NSObject <MKAnnotation> {
 
     NSString *title;
+    NSString *_tagDateString;
     CLLocationCoordinate2D coordinate;
 }
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
 
+
 - (id)initWithCoordinate:(CLLocationCoordinate2D)c andTitle:(NSString *)title;
+- (NSString *)subtitle;
 
 @end
