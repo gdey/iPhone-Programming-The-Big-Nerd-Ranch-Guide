@@ -1,0 +1,458 @@
+TWeatherMap
+v7
+r0
+t295591993.045459
+cCheck dependencies
+cProcessInfoPlistFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist" WeatherMap-Info.plist
+cCpResource build/Debug-iphonesimulator/WeatherMap.app/sunny.png sunny.png
+cCpResource build/Debug-iphonesimulator/WeatherMap.app/partly_cloudy.png partly_cloudy.png
+cCpResource build/Debug-iphonesimulator/WeatherMap.app/cloudy.png cloudy.png
+cCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MainWindow.xib"
+cCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MapViewController.xib"
+cProcessPCH /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelCompile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap.mom" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel"
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/AppDelegate.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherItem.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherServer.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/MapViewController.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherAnnotationView.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap" normal i386
+cGenerateDSYMFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap"
+cTouch "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk
+c000000004B8AD38400000000000000EE
+t1267389316
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004A0BABDE0000000000180310
+t1242278878
+s1573648
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c000000004A0BABD0000000000000046B
+t1242278864
+s1131
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004A0BAA26000000000026DB00
+t1242278438
+s2546432
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A0BAB370000000000260C20
+t1242278711
+s2493472
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A0BAB250000000000001355
+t1242278693
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.h
+c000000004A0BC0FF000000000000017D
+t1242284287
+s381
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c000000004A0BC11200000000000F2360
+t1242284306
+s992096
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A0CBEBB000000000000075E
+t1242349243
+s1886
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A0CBF5F0000000001432D80
+t1242349407
+s21179776
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/Availability.h
+c000000004A0BAC5D00000000000019D8
+t1242279005
+s6616
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel
+c000000004B5E0EC90000000000000088
+t1264455369
+s136
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m
+c000000004B5E0ECA0000000000000AA7
+t1264455370
+s2727
+i<UIKit/UIKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.h
+c000000004B5E0ECA0000000000000BA6
+t1264455370
+s2982
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m
+c000000004B5E0ECA0000000000000BF3
+t1264455370
+s3059
+i"AppDelegate.h"
+i"MapViewController.h"
+i"WeatherServer.h"
+i"WeatherItem.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.h
+c000000004B5E0ECA0000000000000B98
+t1264455370
+s2968
+i<UIKit/UIKit.h>
+i<MapKit/MapKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m
+c000000004B5E0ECA000000000000102F
+t1264455370
+s4143
+i"MapViewController.h"
+i"WeatherServer.h"
+i"WeatherItem.h"
+i"WeatherAnnotationView.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.h
+c000000004B5E0ECA0000000000000A58
+t1264455370
+s2648
+i<MapKit/MapKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m
+c000000004B5E0ECA00000000000017BD
+t1264455370
+s6077
+i"WeatherAnnotationView.h"
+i"WeatherItem.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.h
+c000000004B5E0ECA0000000000000CEE
+t1264455370
+s3310
+i<CoreData/CoreData.h>
+i<MapKit/MapKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m
+c000000004B5E0ECA0000000000000AE4
+t1264455370
+s2788
+i"WeatherItem.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.h
+c000000004B5E0ECA0000000000000BE6
+t1264455370
+s3046
+i<CoreData/CoreData.h>
+i<MapKit/MapKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m
+c000000004B5E0ECA000000000000291D
+t1264455370
+s10525
+i"WeatherServer.h"
+i"WeatherItem.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/WeatherMap_Prefix.pch
+c000000004B3288090000000000000168
+t1261602825
+s360
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+t1273899193
+s340
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM
+t1273899193
+s102
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist
+t1273899190
+s574
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/PkgInfo
+t1273899190
+s8
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+t1273899193
+s38004
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap.mom
+t1273899192
+s1681
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/cloudy.png
+t1273899190
+s9220
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/en.lproj/MainWindow.nib
+t1273899191
+s1587
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/en.lproj/MapViewController.nib
+t1273899191
+s2026
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/partly_cloudy.png
+t1273899190
+s10040
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/sunny.png
+t1273899190
+s9169
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/AppDelegate.o
+t1273899192
+s41592
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/MapViewController.o
+t1273899192
+s41160
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherAnnotationView.o
+t1273899192
+s22332
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherItem.o
+t1273899192
+s12900
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList
+c000000004BEE28B6000000000000041F
+t1273899190
+s1055
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherServer.o
+t1273899192
+s28956
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o
+t1273899192
+s6052
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/cloudy.png
+c000000004B3288090000000000002404
+t1261602825
+s9220
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MainWindow.xib
+c000000004B328809000000000000559D
+t1261602825
+s21917
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MapViewController.xib
+c000000004B32880900000000000052BE
+t1261602825
+s21182
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/partly_cloudy.png
+c000000004B3288090000000000002738
+t1261602825
+s10040
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/sunny.png
+c000000004B32880900000000000023D1
+t1261602825
+s9169
+
+N/var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch.gch
+t1273899192
+s13809840
+
+NWeatherMap-Info.plist
+c000000004B328809000000000000038D
+t1261602825
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies295591990#295591990#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/AppDelegate.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591992.350263
+e295591992.418376
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/AppDelegate.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@107"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m295591992#295591992#0(0"0(0#0#99"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m4300885448#2464"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/AppDelegate.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/AppDelegate.o"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/MapViewController.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591992.475846
+e295591992.552979
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/MapViewController.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@113"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m295591992#295591992#0(0"0(0#0#105"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m4300885448#2476"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/MapViewController.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/MapViewController.o"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherAnnotationView.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591992.518708
+e295591992.588611
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherAnnotationView.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@117"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m295591992#295591992#0(0"0(0#0#109"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m4300885448#2484"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherAnnotationView.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherAnnotationView.o"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherItem.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591992.415504
+e295591992.475733
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherItem.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@107"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m295591992#295591992#0(0"0(0#0#99"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m4300885448#2464"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherItem.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherItem.o"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherServer.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591992.418463
+e295591992.518597
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherServer.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@109"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m295591992#295591992#0(0"0(0#0#101"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m4300885448#2468"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/WeatherServer.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherServer.o"0#
+
+CCompileC build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591992.301204
+e295591992.350142
+r1
+xCompileC
+xbuild/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m295591992#295591992#0(0"0(0#0#95"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m4300885448#2453"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../main.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MainWindow.xib"
+s295591990.814905
+e295591991.497843
+r1
+xCompileXIB
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MainWindow.xib
+lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib295591990#295591991#0(0"0(0#0#101"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MainWindow.xib4300885448#624"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/en.lproj/MainWindow.nib" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MainWindow.xib"0#
+
+CCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MapViewController.xib"
+s295591990.869275
+e295591991.495163
+r1
+xCompileXIB
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MapViewController.xib
+lSLF07#2@41"CompileXIB en.lproj/MapViewController.xib295591990#295591991#0(0"0(0#0#108"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MapViewController.xib4300885448#638"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/en.lproj/MapViewController.nib" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/en.lproj/MapViewController.xib"0#
+
+CCpResource build/Debug-iphonesimulator/WeatherMap.app/cloudy.png cloudy.png
+s295591990.814381
+e295591990.869168
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/WeatherMap.app/cloudy.png
+xcloudy.png
+lSLF07#2@15"Copy cloudy.png295591990#295591990#0(0"0(0#0#88"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/cloudy.png4300885448#580"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/cloudy.png" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app"0#
+
+CCpResource build/Debug-iphonesimulator/WeatherMap.app/partly_cloudy.png partly_cloudy.png
+s295591990.813851
+e295591990.868496
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/WeatherMap.app/partly_cloudy.png
+xpartly_cloudy.png
+lSLF07#2@22"Copy partly_cloudy.png295591990#295591990#0(0"0(0#0#95"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/partly_cloudy.png4300885448#587"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/partly_cloudy.png" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app"0#
+
+CCpResource build/Debug-iphonesimulator/WeatherMap.app/sunny.png sunny.png
+s295591990.813206
+e295591990.866553
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/WeatherMap.app/sunny.png
+xsunny.png
+lSLF07#2@14"Copy sunny.png295591990#295591990#0(0"0(0#0#87"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/sunny.png4300885448#579"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/sunny.png" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app"0#
+
+CDataModelCompile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap.mom" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel"
+s295591992.299540
+e295591992.415392
+r1
+xDataModelCompile
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap.mom
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel
+lSLF07#2@119"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel295591992#295591992#0(0"0(0#0#111"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel4300885448#527"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.5 "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/Classes/../WeatherMap.xcdatamodel" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap.mom"0#
+
+CGenerateDSYMFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap"
+s295591993.022794
+e295591993.042261
+r1
+xGenerateDSYMFile
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+lSLF07#2@118"GenerateDSYMFile build/Debug-iphonesimulator/WeatherMap.app.dSYM build/Debug-iphonesimulator/WeatherMap.app/WeatherMap295591993#295591993#0(0"0(0#0#131"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap4300885448#515"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app.dSYM"0#
+
+CLd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap" normal i386
+s295591992.588709
+e295591993.022664
+r1
+xLd
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap
+xnormal
+xi386
+lSLF07#2@136"Link /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap295591992#295591993#0(0"0(0#0#0"4300885448#1194"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk "-L/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -filelist "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/Objects-normal/i386/WeatherMap.LinkFileList" -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework MapKit -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/WeatherMap"0#
+
+CProcessInfoPlistFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist" WeatherMap-Info.plist
+s295591990.391739
+e295591990.813127
+r1
+xProcessInfoPlistFile
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist
+xWeatherMap-Info.plist
+lSLF07#2@29"Process WeatherMap-Info.plist295591990#295591990#0(0"0(0#0#99"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/WeatherMap-Info.plist2891424684684701184#611"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility WeatherMap-Info.plist -genpkginfo "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app/Info.plist"0#
+
+CProcessPCH /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch.gch WeatherMap_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s295591991.497953
+e295591992.299070
+r1
+xProcessPCH
+x/var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch.gch
+xWeatherMap_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile WeatherMap_Prefix.pch295591991#295591992#0(0"0(0#0#99"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/WeatherMap_Prefix.pch4300885448#2290"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/WeatherMap-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator" "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/WeatherMap.build/Debug-iphonesimulator/WeatherMap.build/DerivedSources" -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/WeatherMap_Prefix.pch" -o /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WeatherMap_Prefix-fpdkysjfqteiqrcaqnpeclkgeqwk/WeatherMap_Prefix.pch.gch0#
+
+CTouch "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app"
+s295591993.042351
+e295591993.045407
+r1
+xTouch
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app
+lSLF07#2@126"Touch /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app295591993#295591993#0(0"0(0#0#0"4300885448#363"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 4/WeatherMap/build/Debug-iphonesimulator/WeatherMap.app"0#
+

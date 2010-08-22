@@ -1,0 +1,270 @@
+TPageControl
+v7
+r0
+t295644838.332384
+cCheck dependencies
+cProcessInfoPlistFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/Info.plist" Info.plist
+cCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MyView.xib"
+cCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MainWindow.xib"
+cCpResource build/Debug-iphonesimulator/PageControl.app/Default.png Default.png
+cProcessPCH /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch.gch Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/main.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/MyViewController.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/AppDelegate.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl" normal i386
+cGenerateDSYMFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app.dSYM" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl"
+cTouch "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app"
+
+N/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk
+c000000004A42E5F300000000000000EE
+t1245898227
+s238
+
+N/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A0BAB370000000000261F90
+t1242278711
+s2498448
+
+N/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A0BAB250000000000001355
+t1242278693
+s4949
+
+N/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A0CBEBB000000000000075E
+t1242349243
+s1886
+
+N/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A0CBF5F0000000001434100
+t1242349407
+s21184768
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.h
+c000000004B69EC4D0000000000000C56
+t1265232973
+s3158
+i<UIKit/UIKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m
+c000000004B69EC4D0000000000001BB3
+t1265232973
+s7091
+i"AppDelegate.h"
+i"MyViewController.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.h
+c000000004B69EC4D0000000000000B16
+t1265232973
+s2838
+i<UIKit/UIKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m
+c000000004B69EC4D0000000000000F67
+t1265232973
+s3943
+i"MyViewController.h"
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Default.png
+c000000004B58DE2A00000000000011E9
+t1264115242
+s4585
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Prefix.pch
+c000000004B69EC4D0000000000000A2B
+t1265232973
+s2603
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app
+t1273952038
+s238
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app.dSYM
+t1273952038
+s102
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/Default.png
+t1273952037
+s4585
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/Info.plist
+t1273952036
+s602
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl
+t1273952038
+s25948
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PkgInfo
+t1273952036
+s8
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/en.lproj/MainWindow.nib
+t1273952037
+s1841
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/en.lproj/MyView.nib
+t1273952037
+s1719
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/AppDelegate.o
+t1273952038
+s46816
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/MyViewController.o
+t1273952038
+s33756
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/PageControl.LinkFileList
+c000000004BEEF7240000000000000211
+t1273952036
+s529
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/main.o
+t1273952038
+s6036
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MainWindow.xib
+c000000004B58DE2A0000000000004E96
+t1264115242
+s20118
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MyView.xib
+c000000004B58DE2A0000000000004450
+t1264115242
+s17488
+
+N/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m
+c000000004B69EC4D0000000000000ADF
+t1265232973
+s2783
+i<UIKit/UIKit.h>
+
+N/var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch.gch
+t1273952038
+s12952976
+
+NInfo.plist
+c000000004B58DE2A0000000000000381
+t1264115242
+s897
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies295644836#295644836#0(0"0(0#1#0"4300903632#0"0#
+
+CCompileC build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/AppDelegate.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295644838.216831
+e295644838.298407
+r1
+xCompileC
+xbuild/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/AppDelegate.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@108"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m295644838#295644838#0(0"0(0#0#100"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m4300903632#2440"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2" -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk" -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/AppDelegate.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/AppDelegate.o"0#
+
+CCompileC build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/MyViewController.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295644838.157486
+e295644838.232334
+r1
+xCompileC
+xbuild/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/MyViewController.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@113"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m295644838#295644838#0(0"0(0#0#105"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m4300903632#2450"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2" -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk" -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Classes/MyViewController.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/MyViewController.o"0#
+
+CCompileC build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/main.o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s295644838.155531
+e295644838.216722
+r1
+xCompileC
+xbuild/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/main.o
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@93"Compile /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m295644838#295644838#0(0"0(0#0#85"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m4300903632#2418"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2" -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk" -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources" -include /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/main.m" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MainWindow.xib"
+s295644836.941969
+e295644837.385276
+r1
+xCompileXIB
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MainWindow.xib
+lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib295644836#295644837#0(0"0(0#0#102"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MainWindow.xib4300903632#664"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/usr/bin/ibtool" --errors --warnings --notices --output-format human-readable-text --compile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/en.lproj/MainWindow.nib" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MainWindow.xib"0#
+
+CCompileXIB "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MyView.xib"
+s295644836.941255
+e295644837.259244
+r1
+xCompileXIB
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MyView.xib
+lSLF07#2@30"CompileXIB en.lproj/MyView.xib295644836#295644837#0(0"0(0#0#98"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MyView.xib4300903632#656"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/usr/bin/ibtool" --errors --warnings --notices --output-format human-readable-text --compile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/en.lproj/MyView.nib" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/en.lproj/MyView.xib"0#
+
+CCpResource build/Debug-iphonesimulator/PageControl.app/Default.png Default.png
+s295644837.259330
+e295644837.264353
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/PageControl.app/Default.png
+xDefault.png
+lSLF07#2@16"Copy Default.png295644837#295644837#0(0"0(0#0#90"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Default.png4300903632#621"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp" -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Default.png" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app"0#
+
+CGenerateDSYMFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app.dSYM" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl"
+s295644838.315386
+e295644838.329583
+r1
+xGenerateDSYMFile
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app.dSYM
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl
+lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/PageControl.app.dSYM build/Debug-iphonesimulator/PageControl.app/PageControl295644838#295644838#0(0"0(0#0#134"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl4300903632#557"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/usr/bin/dsymutil" "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl" -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app.dSYM"0#
+
+CLd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl" normal i386
+s295644838.298502
+e295644838.315276
+r1
+xLd
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl
+xnormal
+xi386
+lSLF07#2@139"Link /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl295644838#295644838#0(0"0(0#0#0"4300903632#1111"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2" -arch i386 -isysroot "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk" "-L/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator" -filelist "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/Objects-normal/i386/PageControl.LinkFileList" -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PageControl"0#
+
+CProcessInfoPlistFile "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/Info.plist" Info.plist
+s295644836.934033
+e295644836.941174
+r1
+xProcessInfoPlistFile
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist295644836#295644836#0(0"0(0#0#89"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Info.plist4300903632#634"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Info.plist -genpkginfo "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app/Info.plist"0#
+
+CProcessPCH /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch.gch Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s295644837.385384
+e295644838.155268
+r1
+xProcessPCH
+x/var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch.gch
+xPrefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@21"Precompile Prefix.pch295644837#295644838#0(0"0(0#0#89"/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Prefix.pch4300903632#2252"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2" -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk" -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-generated-files.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-own-target-headers.hmap" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-all-target-headers.hmap" -iquote "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/PageControl-project-headers.hmap" "-F/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/include" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources/i386" "-I/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/PageControl.build/Debug-iphonesimulator/PageControl.build/DerivedSources" -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/Prefix.pch" -o /var/folders/l7/l7LszMkuGwCplw-4HQ+IHE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-fzbntksuylfyxobosismjgiruvpy/Prefix.pch.gch0#
+
+CTouch "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app"
+s295644838.329665
+e295644838.332342
+r1
+xTouch
+x/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app
+lSLF07#2@128"Touch /Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app295644838#295644838#0(0"0(0#0#0"4300903632#395"    cd "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl"    setenv PATH "/Developer Beta/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer Beta/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/gdey/Projects/iPhone Programming (Big Nerd Ranch)/chapter 6/PageControl/build/Debug-iphonesimulator/PageControl.app"0#
+
