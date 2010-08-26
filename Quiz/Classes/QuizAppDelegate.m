@@ -11,15 +11,29 @@
 @implementation QuizAppDelegate
 
 @synthesize window;
-
+@synthesize questionField;
+@synthesize answerField;
 
 #pragma mark -
 #pragma mark Application lifecycle
+
+- (id) init {
+    [super init];
+    questions = [[NSMutableArray alloc] initWithCapacity:3];
+    answers   = [[NSMutableArray alloc] initWithCapacity:3];
+    
+        // Add questions and answers
+    [questions addObjectsFromArray:[NSArray arrayWithObjects:@"What is 7 + 7?", @"What is the capitol of Vermont?",@"From what is cognac made?", nil]];
+    [answers addObjectsFromArray:[NSArray arrayWithObjects:@"14",@"Montpelier",@"Grapes",nil]];
+    
+    return self;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
 	
+        
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -63,6 +77,29 @@
      */
 }
 
+- (IBAction) showQuestion:(id)sender {
+        // Step to the 
+    currentQuestionIndex++;
+    if (currentQuestionIndex == [questions count]) {
+        currentQuestionIndex = 0;
+    }
+    
+    NSString *question = [questions objectAtIndex:currentQuestionIndex];
+    
+    NSLog(@"displaying question %@",question);
+    [questionField setText:question];
+    [answerField setText:@"???"];
+    
+    
+    
+}
+
+- (IBAction) showAnswer:(id)sender {
+    
+    NSString *answer = [answers objectAtIndex:currentQuestionIndex];
+    [answerField setText:answer];
+    
+}
 
 #pragma mark -
 #pragma mark Memory management
@@ -76,6 +113,8 @@
 
 - (void)dealloc {
     [window release];
+    [questions release];
+    [answers release];
     [super dealloc];
 }
 
