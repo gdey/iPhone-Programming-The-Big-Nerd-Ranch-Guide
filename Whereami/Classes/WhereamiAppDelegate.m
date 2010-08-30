@@ -37,6 +37,12 @@
         // Tell our manager to start looking for its location immediately
     [locationManager startUpdatingLocation];
     
+    
+    [locationManager setHeadingFilter:kCLHeadingFilterNone];
+    
+        // Tell our manager to start looking for heading inforamtion
+    [locationManager startUpdatingHeading];
+    
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -92,6 +98,9 @@
     NSLog(@"Could not find location: %@",error);
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+    NSLog(@"New heading is %#",newHeading);
+}
 #pragma mark -
 #pragma mark Memory management
 
