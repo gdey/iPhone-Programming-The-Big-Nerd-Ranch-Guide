@@ -10,17 +10,23 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface MapPoint : NSObject <MKAnnotation> {
+@interface MapPoint : NSObject <MKAnnotation,MKReverseGeocoderDelegate> {
 
     NSString *title;
     CLLocationCoordinate2D coordinate;
-    NSString *subtitle;
+    NSString *tagDateString;
+    NSString *city;
+    NSString *state;
+
+    MKReverseGeocoder *geoCoder;
 
 }
 
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *subtitle;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *state;
+
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (id) initWithCoordinate: (CLLocationCoordinate2D)c andTitle:(NSString *)t;

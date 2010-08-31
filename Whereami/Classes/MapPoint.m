@@ -11,7 +11,7 @@
 
 @implementation MapPoint
 
-@synthesize subtitle, title, coordinate;
+@synthesize city, state, title, coordinate;
 
 
 - (id) initWithCoordinate: (CLLocationCoordinate2D)c andTitle:(NSString *)t {
@@ -27,19 +27,45 @@
     NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     [dateFomatter setLocale:usLocale];
     [usLocale release];
-    [self setSubtitle:[dateFomatter stringFromDate:tagDate] ];
+    tagDateString = [[dateFomatter stringFromDate:tagDate] retain];
         
     [dateFomatter release];
     [tagDate release];
+    
+        // Setup the Geocoder.
+    geoCoder = [[MKReverseGeocoder alloc] initWithCoordinate:c];
+    [geoCoder setDelegate:self];
+    [geoCoder start];
     
     return self;
 }
 
 
+- (NSString *)subtitle {
+    NSString *subtitle = [NSString stringWithFormat:@"Date: %@", tagDateString];
+    if (city != nil && state != nil) {
+        subtitle = [NSString stringWithFormat:@"%@, %@ -- %@",city,state,subtitle];
+    }
+    return subtitle;
+}
+
 - (void) dealloc {
-    [subtitle release];
+    [geoCoder release];
+    [tagDateString release];
     [title release];
     [super dealloc];
+}
+
+#pragma mark -
+#pragma mark MKReverseGeocoder Delegate Method
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error {
+    NSLog(@"We got the following errors: %@",error);
+}
+
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark {
+    [self setCity:[placemark locality]];
+    [self setState:[placemark administrativeArea]];
 }
 
 @end
