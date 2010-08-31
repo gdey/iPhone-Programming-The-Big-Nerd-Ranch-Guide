@@ -30,7 +30,6 @@
     tagDateString = [[dateFomatter stringFromDate:tagDate] retain];
         
     [dateFomatter release];
-    [tagDate release];
     
         // Setup the Geocoder.
     geoCoder = [[MKReverseGeocoder alloc] initWithCoordinate:c];
