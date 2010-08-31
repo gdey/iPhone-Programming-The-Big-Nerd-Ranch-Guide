@@ -112,6 +112,24 @@
 }
 
 #pragma mark -
+#pragma mark Actions 
+
+- (IBAction) changeMapType:(id) sender {
+    
+    switch ([segmentControl selectedSegmentIndex]) {
+        case 0:
+            [mapView setMapType:MKMapTypeSatellite];
+            break;
+        case 1:
+            [mapView setMapType:MKMapTypeHybrid];
+            break;
+        default:
+            [mapView setMapType:MKMapTypeStandard];
+            break;
+    }
+}
+
+#pragma mark -
 #pragma mark UITextField Delegate Methods
 
 - (BOOL) textFieldShouldReturn:(UITextField *)tf {

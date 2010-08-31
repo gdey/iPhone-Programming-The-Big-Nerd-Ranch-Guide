@@ -17,16 +17,19 @@
     IBOutlet MKMapView *mapView;
     IBOutlet UIActivityIndicatorView *activityIndicator;
     IBOutlet UITextField *locationField;
+    IBOutlet UISegmentedControl *segmentControl;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) IBOutlet UITextField *locationField;
+@property (nonatomic, retain) IBOutlet UISegmentedControl *segmentControl;
 
 
 - (void) findLocation;
 - (void) foundLocation;
 
+- (IBAction) changeMapType:(id) sender;
 @end
 
