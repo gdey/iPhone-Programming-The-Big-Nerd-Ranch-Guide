@@ -7,11 +7,14 @@
 //
 
 #import "WhereamiAppDelegate.h"
+#import "MapPoint.h"
 
 @implementation WhereamiAppDelegate
 
 @synthesize window;
-
+@synthesize mapView;
+@synthesize activityIndicator;
+@synthesize locationField;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -35,7 +38,8 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
         // Tell our manager to start looking for its location immediately
-    [locationManager startUpdatingLocation];
+        // [locationManager startUpdatingLocation];
+    [mapView setShowsUserLocation:YES];
     
     
     [locationManager setHeadingFilter:kCLHeadingFilterNone];
@@ -85,12 +89,67 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+#pragma mark -
+#pragma mark workhorses
+
+
+- (void) findLocation {
+    
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
+    [locationField setHidden:YES];
+}
+
+
+- (void) foundLocation {
+    
+    [locationField setText:@""];
+    [activityIndicator stopAnimating];
+    [locationField setHidden:NO];
+    [locationManager stopUpdatingLocation];
+    
+}
+
+#pragma mark -
+#pragma mark UITextField Delegate Methods
+
+- (BOOL) textFieldShouldReturn:(UITextField *)tf {
+    
+    [self findLocation];
+    [tf resignFirstResponder];
+    return YES;
+}
+
+#pragma mark -
+#pragma mark MapView Delegate Methods
+
+- (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {
+
+    MKAnnotationView *annotationView = [views objectAtIndex:0];
+    id <MKAnnotation> mp = [annotationView annotation];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
+    [mv setRegion:region animated:YES];
+}
+
 #pragma mark -
 #pragma mark CoreLocation Delegate Methods 
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"%@",newLocation);
+    
+    NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
+    
+    if (t < -180) {
+        return;
+    }
+    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[newLocation coordinate] andTitle:[locationField text]];
+    [mapView addAnnotation:mp];
+    [mp release];
+    
+    [self foundLocation];
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
