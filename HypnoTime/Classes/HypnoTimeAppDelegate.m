@@ -7,6 +7,8 @@
 //
 
 #import "HypnoTimeAppDelegate.h"
+#import "CurrentTimeViewController.h"
+#import "HypnosisViewController.h"
 
 @implementation HypnoTimeAppDelegate
 
@@ -21,6 +23,22 @@
     
         // Create the tabBarController
     tabBarController = [[UITabBarController alloc] init];
+    
+    
+        // Create the two view controllers
+    UIViewController *vc1 = [[HypnosisViewController alloc] init];
+    UIViewController *vc2 = [[CurrentTimeViewController alloc] init];
+    
+        // Make an array containing the two view controllers
+    NSArray *viewControllers = [NSArray arrayWithObjects:vc1, vc2, nil];
+    
+    [vc1 release];
+    [vc2 release];
+    
+        // Attach them to the tab bar controller
+    [tabBarController setViewControllers:viewControllers];
+    
+    
     
         // Put the tabBarController's view on the window
     [window addSubview:[tabBarController view]];
