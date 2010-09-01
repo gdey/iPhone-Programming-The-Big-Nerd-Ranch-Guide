@@ -40,6 +40,11 @@
     [scrollView setContentOffset:offset];
     
     
+        // Enable zooming
+    [scrollView setMinimumZoomScale:0.5];
+    [scrollView setMaximumZoomScale:5];
+    [scrollView setDelegate:self];
+    
         // Create the view
     view = [[HypnosisView alloc] initWithFrame:reallyBigRect];
     [view setBackgroundColor:[UIColor clearColor]];
@@ -51,6 +56,10 @@
 	return YES;
 }
 
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return view;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*

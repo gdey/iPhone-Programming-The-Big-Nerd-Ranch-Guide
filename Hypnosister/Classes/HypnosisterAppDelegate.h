@@ -10,7 +10,7 @@
 
 @class HypnosisView;
 
-@interface HypnosisterAppDelegate : NSObject <UIApplicationDelegate> {
+@interface HypnosisterAppDelegate : NSObject <UIApplicationDelegate, UIScrollViewDelegate> {
     UIWindow *window;
     HypnosisView *view;
 }
