@@ -51,7 +51,7 @@
     [scrollView addSubview:view];
     
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     
     [window makeKeyAndVisible];
 	[scrollView release];

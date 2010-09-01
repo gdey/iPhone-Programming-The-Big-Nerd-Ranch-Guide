@@ -43,11 +43,18 @@
     
         // Set the stroke color to light gray
     [[UIColor lightGrayColor] setStroke];
+    float red = 0.01;
+    float blue = 0.02;
+    float green = 0.03;
     
         // Draw concentric circles from the outside in
     for (float currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20) {
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2.0, YES);
         CGContextStrokePath(context);
+        [[UIColor colorWithRed:red green:green blue:blue alpha:1.0] setStroke];
+        red += 0.01;
+        green += 0.01;
+        blue += 0.02;
     }
                         
           
