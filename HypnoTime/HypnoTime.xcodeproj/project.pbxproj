@@ -19,6 +19,10 @@
 		7A13CAA4122EA87A00A8F25B /* CurrentTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13CAA2122EA87A00A8F25B /* CurrentTimeViewController.m */; };
 		7A13CAA5122EA87A00A8F25B /* CurrentTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A13CAA3122EA87A00A8F25B /* CurrentTimeViewController.xib */; };
 		7A13CAA8122EA89800A8F25B /* HypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13CAA7122EA89800A8F25B /* HypnosisViewController.m */; };
+		7A13CAD31230BC7400A8F25B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13CAD11230BC7400A8F25B /* MapViewController.m */; };
+		7A13CAD41230BC7400A8F25B /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A13CAD21230BC7400A8F25B /* MapViewController.xib */; };
+		7A13CAE11230C06700A8F25B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A13CAE01230C06700A8F25B /* Icon.png */; };
+		7A13CB421230C8ED00A8F25B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A13CB411230C8ED00A8F25B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,11 @@
 		7A13CAA3122EA87A00A8F25B /* CurrentTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CurrentTimeViewController.xib; path = Classes/CurrentTimeViewController.xib; sourceTree = "<group>"; };
 		7A13CAA6122EA89800A8F25B /* HypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisViewController.h; sourceTree = "<group>"; };
 		7A13CAA7122EA89800A8F25B /* HypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisViewController.m; sourceTree = "<group>"; };
+		7A13CAD01230BC7400A8F25B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7A13CAD11230BC7400A8F25B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7A13CAD21230BC7400A8F25B /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapViewController.xib; path = Classes/MapViewController.xib; sourceTree = "<group>"; };
+		7A13CAE01230C06700A8F25B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7A13CB411230C8ED00A8F25B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* HypnoTime-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HypnoTime-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +60,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				7A13CB421230C8ED00A8F25B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				7A13CAA7122EA89800A8F25B /* HypnosisViewController.m */,
 				7A13CAA1122EA87A00A8F25B /* CurrentTimeViewController.h */,
 				7A13CAA2122EA87A00A8F25B /* CurrentTimeViewController.m */,
+				7A13CAD01230BC7400A8F25B /* MapViewController.h */,
+				7A13CAD11230BC7400A8F25B /* MapViewController.m */,
 				7A13CA82122EA0C300A8F25B /* HypnosisView.m */,
 				7A13CA83122EA0C300A8F25B /* HypnosisView.h */,
 				1D3623240D0F684500981E51 /* HypnoTimeAppDelegate.h */,
@@ -104,9 +116,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A13CAE01230C06700A8F25B /* Icon.png */,
 				7A13CA85122EA14A00A8F25B /* Time.png */,
 				7A13CA86122EA14A00A8F25B /* Hypno.png */,
 				7A13CAA3122EA87A00A8F25B /* CurrentTimeViewController.xib */,
+				7A13CAD21230BC7400A8F25B /* MapViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* HypnoTime-Info.plist */,
 			);
@@ -119,6 +133,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				7A13CB411230C8ED00A8F25B /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +184,8 @@
 				7A13CA87122EA14A00A8F25B /* Time.png in Resources */,
 				7A13CA88122EA14A00A8F25B /* Hypno.png in Resources */,
 				7A13CAA5122EA87A00A8F25B /* CurrentTimeViewController.xib in Resources */,
+				7A13CAD41230BC7400A8F25B /* MapViewController.xib in Resources */,
+				7A13CAE11230C06700A8F25B /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +201,7 @@
 				7A13CA84122EA0C300A8F25B /* HypnosisView.m in Sources */,
 				7A13CAA4122EA87A00A8F25B /* CurrentTimeViewController.m in Sources */,
 				7A13CAA8122EA89800A8F25B /* HypnosisViewController.m in Sources */,
+				7A13CAD31230BC7400A8F25B /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
