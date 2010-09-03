@@ -11,11 +11,16 @@
 
 @implementation HypnosisView
 
+@synthesize xShift, yShift, stripeColor;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
+        xShift = 0.0;
+        yShift = 0.0;
+        [self setStripeColor:[UIColor lightGrayColor]];
     }
+    
     return self;
 }
 
@@ -42,19 +47,14 @@
     CGContextSetLineWidth(context, 10);
     
         // Set the stroke color to light gray
-    [[UIColor lightGrayColor] setStroke];
-    float red = 0.01;
-    float blue = 0.02;
-    float green = 0.03;
-    
+    [stripeColor setStroke];
+
         // Draw concentric circles from the outside in
     for (float currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20) {
+        center.x += xShift;
+        center.y += yShift;
         CGContextAddArc(context, center.x, center.y, currentRadius, 0.0, M_PI * 2.0, YES);
         CGContextStrokePath(context);
-        [[UIColor colorWithRed:red green:green blue:blue alpha:1.0] setStroke];
-        red += 0.01;
-        green += 0.01;
-        blue += 0.02;
     }
                         
           
@@ -84,8 +84,43 @@
     
 }
 
+- (void) setStripeColor:(UIColor *)color {
+    if(stripeColor != color){
+        [color retain];
+        [stripeColor release];
+        stripeColor = color;
+        [self setNeedsDisplay];
+    }
+}
+
+- (void) setRandomStripColor {
+    
+    float r,g,b;
+    r = random() % 255 / 256.0;
+    g = random() % 255 / 256.0;
+    b = random() % 255 / 256.0;
+    
+    [self setStripeColor:[UIColor colorWithRed:r green:g blue:b alpha:1.0]];
+
+}
+
+
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+        // Shake is the only kind of motion for now
+        // But we should (for future compatibility) check motion type
+    if(motion == UIEventSubtypeMotionShake){
+        NSLog(@"shake started");
+        [self setRandomStripColor];
+    }
+}
+
+- (BOOL) canBecomeFirstResponder {
+    return YES;
+}
 
 - (void)dealloc {
+    [stripeColor release];
     [super dealloc];
 }
 

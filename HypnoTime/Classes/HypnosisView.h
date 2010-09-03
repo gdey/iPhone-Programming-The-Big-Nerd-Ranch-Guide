@@ -11,6 +11,14 @@
 
 @interface HypnosisView : UIView {
 
+    float xShift, yShift;
+    UIColor *stripeColor;
+    
 }
+
+
+@property (nonatomic, assign) float xShift;
+@property (nonatomic, assign) float yShift;
+@property (nonatomic, retain) UIColor *stripeColor;
 
 @end

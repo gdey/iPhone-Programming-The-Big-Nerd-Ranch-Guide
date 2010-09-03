@@ -49,6 +49,7 @@
         // Reveive updates every 1/10th of a second
     [a setUpdateInterval:0.1];
     [a setDelegate:self];
+    [[self view] becomeFirstResponder];
     
 }
 
@@ -90,6 +91,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [[self view] resignFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -107,7 +109,19 @@
 #pragma mark UIAccelerometerDelegate methods
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)accel {
-    NSLog(@"%f, %f, %f",[accel x], [accel y], [accel z]);
+    
+    HypnosisView *hv = (HypnosisView *)[self view];
+    float xShift = [hv xShift] * 0.8 + [accel x] * 2.0;
+    float yShift = [hv yShift] * 0.8 - [accel y] * 2.0;
+    [hv setXShift:xShift];
+    [hv setYShift:yShift];
+    
+        // We also want to change the color depending on the direction:
+    [hv setStripeColor:[UIColor colorWithRed:[accel x] green:[accel y] blue:[accel z] alpha:1.0]];
+    
+        // Redraw view
+    [hv setNeedsDisplay];
+
 }
 
 @end
