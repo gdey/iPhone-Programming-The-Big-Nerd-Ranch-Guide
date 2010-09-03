@@ -13,7 +13,8 @@
 
 - (id) init {
         // Call the superclass's designated initializer
-    [super initWithNibName:nil bundle:nil];
+    [super initWithNibName:@"CurrentTimeViewController" bundle:nil];
+    dateFormatterShort = nil;
     
         // Get the tab bar item
     UITabBarItem *tbi = [self tabBarItem];
@@ -37,14 +38,16 @@
 }
 
 
+/*
     // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+
     
     
     [super loadView];
     [[self view] setBackgroundColor:[UIColor redColor]];
 }
-
+*/
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -52,6 +55,21 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (IBAction) showCurrentTime:(id)sender {
+    NSDate *now = [NSDate date];
+    
+    if (!dateFormatterShort){
+        dateFormatterShort = [[NSDateFormatter alloc] init];
+        [dateFormatterShort setTimeStyle:NSDateFormatterShortStyle];
+    }
+    [timeLabel setText:[dateFormatterShort stringFromDate:now]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super  viewWillAppear:animated];
+    [self showCurrentTime:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -64,10 +82,15 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    NSLog(@"Must have received a low-memory warning. Releasing timeLabel");
+    [timeLabel release];
+    timeLabel = nil;
 }
 
 
 - (void)dealloc {
+    [dateFormatterShort release];
+    [timeLabel release];
     [super dealloc];
 }
 

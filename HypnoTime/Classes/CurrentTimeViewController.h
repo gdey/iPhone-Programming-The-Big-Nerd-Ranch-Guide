@@ -11,6 +11,11 @@
 
 @interface CurrentTimeViewController : UIViewController {
 
+    
+    IBOutlet UILabel *timeLabel;
+    NSDateFormatter *dateFormatterShort;
 }
+
+- (IBAction)showCurrentTime:(id)sender;
 
 @end

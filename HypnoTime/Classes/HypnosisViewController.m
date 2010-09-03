@@ -7,6 +7,7 @@
 //
 
 #import "HypnosisViewController.h"
+#import "HypnosisView.h"
 
 
 @implementation HypnosisViewController
@@ -42,10 +43,12 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-
-
-    [super loadView];
-    [[self view] setBackgroundColor:[UIColor orangeColor]];
+    
+    
+    HypnosisView *hv = [[HypnosisView alloc] initWithFrame:CGRectZero];
+    [hv setBackgroundColor:[UIColor whiteColor]];
+    [self setView:hv];
+    [hv release];
 }
 
 
