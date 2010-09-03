@@ -41,6 +41,18 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSLog(@"Monitoring accelerometer");
+    UIAccelerometer *a = [UIAccelerometer sharedAccelerometer];
+        // Reveive updates every 1/10th of a second
+    [a setUpdateInterval:0.1];
+    [a setDelegate:self];
+    
+}
+
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
     
@@ -80,10 +92,22 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
+    
+}
 
 - (void)dealloc {
     [super dealloc];
 }
 
+
+#pragma mark -
+#pragma mark UIAccelerometerDelegate methods
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)accel {
+    NSLog(@"%f, %f, %f",[accel x], [accel y], [accel z]);
+}
 
 @end

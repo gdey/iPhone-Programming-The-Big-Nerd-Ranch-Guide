@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface HypnosisViewController : UIViewController {
+@interface HypnosisViewController : UIViewController <UIAccelerometerDelegate> {
 
 }
 

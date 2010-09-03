@@ -35,9 +35,7 @@
     return [self init];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"In the viewWillAppear");
-}
+
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
