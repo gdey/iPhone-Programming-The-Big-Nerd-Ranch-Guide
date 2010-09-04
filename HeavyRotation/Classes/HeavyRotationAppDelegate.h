@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class HeavyViewController;
+
 @interface HeavyRotationAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+    HeavyViewController *hv;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

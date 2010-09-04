@@ -7,6 +7,7 @@
 //
 
 #import "HeavyRotationAppDelegate.h"
+#import "HeavyViewController.h"
 
 @implementation HeavyRotationAppDelegate
 
@@ -20,7 +21,7 @@
     
     // Override point for customization after application launch.
 	
-        // Get the device object
+       // Get the device object
     UIDevice *device = [UIDevice currentDevice];
     
         // Tell it to start monitoring the accelerometer for orientation
@@ -34,6 +35,9 @@
            selector:@selector(orientationChanged:) 
                name:UIDeviceOrientationDidChangeNotification 
              object:device];
+    
+    hv = [[HeavyViewController alloc] init];
+    [window addSubview:[hv view]];
     
     
     [window makeKeyAndVisible];
@@ -98,6 +102,9 @@
 - (void)dealloc {
     [window release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    if( hv ){
+        [hv release];
+    }
     [super dealloc];
 }
 
