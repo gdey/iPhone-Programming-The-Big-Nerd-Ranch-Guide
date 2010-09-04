@@ -27,6 +27,9 @@
         // Tell it to start monitoring the accelerometer for orientation
     [device beginGeneratingDeviceOrientationNotifications];
     
+        // Tell the device we want Proximity Notifications
+    [device setProximityMonitoringEnabled:YES];
+    
         // Get the notificaiton center for the app
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
@@ -36,6 +39,12 @@
                name:UIDeviceOrientationDidChangeNotification 
              object:device];
     
+    [nc addObserver:self 
+           selector:@selector(promityChanged:) 
+               name:UIDeviceProximityStateDidChangeNotification 
+             object:device];
+    
+    NSLog(@"Device id: %@",[device uniqueIdentifier]);
     hv = [[HeavyViewController alloc] init];
     [window addSubview:[hv view]];
     
@@ -50,6 +59,9 @@
     NSLog(@"orientationChanged: %d", [[note object] orientation]);
 }
 
+- (void) promityChanged:(NSNotification *)note {
+    NSLog(@"promityChanged: %d", [[note object] proximityState]);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
