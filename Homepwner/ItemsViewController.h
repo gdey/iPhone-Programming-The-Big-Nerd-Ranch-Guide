@@ -11,7 +11,8 @@
 
 @interface ItemsViewController : UITableViewController {
     
-    NSMutableArray *possessions;
+    NSMutableArray *possessionsAbove50;
+    NSMutableArray *possessionsBelow50;
 
 }
 

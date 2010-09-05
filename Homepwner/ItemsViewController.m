@@ -18,10 +18,17 @@
     [super initWithStyle:UITableViewStyleGrouped];
     
         // Create an array of 10 random possession objects
-    possessions = [[NSMutableArray alloc] initWithCapacity:10];
+    possessionsAbove50 = [[NSMutableArray alloc] initWithCapacity:5];
+    possessionsBelow50 = [[NSMutableArray alloc] initWithCapacity:5];
     
     for (int i = 0; i < 10; i++) {
-        [possessions addObject:[Possession newRandomPossession]];
+        Possession *p = [Possession newRandomPossession];
+        if( [p valueInDollars] >= 50 ){
+            [possessionsAbove50 addObject:p];
+        } else {
+            [possessionsBelow50 addObject:p];
+        }
+        [p release];
     }
     return self;
 }
@@ -34,8 +41,23 @@
 #pragma mark -
 #pragma mark TableViewController DataSource Methods
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger) tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger) section {
-    return [possessions count];
+    
+    if (section == 0 ) {
+        return [possessionsAbove50 count];
+    }
+    return [possessionsBelow50 count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if( section == 0 ){
+        return @"$50 amd Above";
+    }
+    return @"Below $50";
 }
                          
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,7 +71,13 @@
         // Set the text on the cell with the description of the possession
         // that is at the nth index of the possessions, where n = row this cell
         // will appear in on the tableView
-    Possession *p = (Possession *)[possessions objectAtIndex:[indexPath row]];
+    Possession *p;
+    if( [indexPath section] == 0 ){
+        p = [possessionsAbove50 objectAtIndex:[indexPath row]];
+    } else {
+        p = [possessionsBelow50 objectAtIndex:[indexPath row]];
+    }
+
     [[cell textLabel] setText: [p description]];
     return cell;
 }
