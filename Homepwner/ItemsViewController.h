@@ -12,6 +12,7 @@
 @interface ItemsViewController : UITableViewController {
     
     NSMutableArray *possessions;
+    UIView *headerView;
 
 }
 
