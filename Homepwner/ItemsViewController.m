@@ -61,6 +61,23 @@
 }
 
 
+- (void) setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[possessions count] inSection:0];
+    
+    if( editing ){
+        
+        [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                                withRowAnimation:UITableViewRowAnimationLeft];
+    } else {
+        
+        [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                                withRowAnimation:UITableViewRowAnimationFade];
+    }
+
+}
+
 #pragma mark -
 #pragma mark TableView Delegeate Methods
 
@@ -72,10 +89,27 @@
     return [[self headerView] frame].size.height;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self isEditing] && [indexPath row] == [possessions count]) {
+        return UITableViewCellEditingStyleInsert;
+    }
+    return UITableViewCellEditingStyleDelete;
+    
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
+    if ([proposedDestinationIndexPath row] < [possessions count]) {
+        return proposedDestinationIndexPath;
+    }
+    return [NSIndexPath indexPathForRow:[possessions count] - 1 inSection:0];
+}
 #pragma mark -
 #pragma mark TableView DataSource Methods
 
 - (NSInteger) tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger) section {
+    if ([self isEditing]) {
+        return [possessions count] + 1;
+    }
     return [possessions count];
 }
                          
@@ -90,8 +124,15 @@
         // Set the text on the cell with the description of the possession
         // that is at the nth index of the possessions, where n = row this cell
         // will appear in on the tableView
-    Possession *p = (Possession *)[possessions objectAtIndex:[indexPath row]];
-    [[cell textLabel] setText: [p description]];
+    if ([indexPath row] < [possessions count]) {
+        
+        Possession *p = (Possession *)[possessions objectAtIndex:[indexPath row]];
+        [[cell textLabel] setText: [p description]];
+    } else {
+        [[cell textLabel] setText:@"Add New Item"];
+    }
+
+    
     return cell;
 }
 
@@ -101,6 +142,24 @@
         [possessions removeObjectAtIndex:[indexPath row]];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    
+    Possession *p = [[possessions objectAtIndex:[fromIndexPath row]] retain];
+    
+    [possessions removeObjectAtIndex:[fromIndexPath row]];
+    [possessions insertObject:p atIndex:[toIndexPath row]];
+    
+    [p release];
+    
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath row] < [possessions count]) {
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark -
