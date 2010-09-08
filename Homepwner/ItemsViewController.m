@@ -23,6 +23,10 @@
     for (int i = 0; i < 10; i++) {
         [possessions addObject:[Possession newRandomPossession]];
     }
+    
+    [[self navigationItem] setTitle:@"Homepwner"];
+    [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
+    
     return self;
 }
 

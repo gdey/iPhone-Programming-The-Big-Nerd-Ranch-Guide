@@ -24,7 +24,9 @@
     itemsViewController = [[ItemsViewController alloc] init];
     
         // Place ItesmViewController's table view int he window hierarchy
-    [window addSubview:[itemsViewController view]];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
+    [window addSubview:[ navController view]];
+    [navController release];
     [window makeKeyAndVisible];
 	
 	return YES;
