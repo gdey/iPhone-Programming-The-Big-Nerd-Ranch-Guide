@@ -7,6 +7,7 @@
 //
 
 #import "ItemsViewController.h"
+#import "ItemDetailViewController.h"
 #import "Possession.h"
 
 @implementation ItemsViewController
@@ -34,35 +35,7 @@
     return [self init];
 }
 
-- (UIView *)headerView {
-    if(headerView)
-        return headerView;
-        // Create a UIButton object, simple rounded rect style
-    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    
-        // Set the title of this button to "Edit"
-    [editButton setTitle:@"Edit" forState:UIControlStateNormal];
-    
-        // How wide is the screen?
-    float w = [[UIScreen mainScreen] bounds].size.width;
-    
-        // Create a rectangle for the button
-    CGRect editButtonFrame = CGRectMake(8.0, 8.0, w - 16.0, 30.0);
-    [editButton setFrame:editButtonFrame];
-    
-    
-    [editButton addTarget:self
-                   action:@selector(editingButtonPressed:) 
-         forControlEvents:UIControlEventTouchUpInside];
-    
-    CGRect headerViewFrame = CGRectMake(0,0,w,48);
-    
-    headerView = [[UIView alloc] initWithFrame:headerViewFrame];
-    
-    [headerView addSubview:editButton];
-    
-    return headerView;
-}
+
 
 
 - (void) setEditing:(BOOL)editing animated:(BOOL)animated {
@@ -85,13 +58,7 @@
 #pragma mark -
 #pragma mark TableView Delegeate Methods
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectio {
-    return [self headerView];
-}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [[self headerView] frame].size.height;
-}
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self isEditing] && [indexPath row] == [possessions count]) {

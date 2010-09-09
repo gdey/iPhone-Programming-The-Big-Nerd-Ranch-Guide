@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
+@class ItemDetailViewController;
+
 @interface ItemsViewController : UITableViewController {
     
     NSMutableArray *possessions;
     UIView *headerView;
+    ItemDetailViewController *detailViewController;
 
 }
 
