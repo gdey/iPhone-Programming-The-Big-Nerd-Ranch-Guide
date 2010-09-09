@@ -74,6 +74,16 @@
     }
     return [NSIndexPath indexPathForRow:[possessions count] - 1 inSection:0];
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!detailViewController) {
+        detailViewController = [[ItemDetailViewController alloc] init];
+    }
+    
+    
+    [[self navigationController] pushViewController:detailViewController animated:YES];
+}
+
 #pragma mark -
 #pragma mark TableView DataSource Methods
 

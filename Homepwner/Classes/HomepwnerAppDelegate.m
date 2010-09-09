@@ -24,9 +24,8 @@
     itemsViewController = [[ItemsViewController alloc] init];
     
         // Place ItesmViewController's table view int he window hierarchy
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
-    [window addSubview:[ navController view]];
-    [navController release];
+    navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
+    [window addSubview:[navController view]];
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -84,7 +83,7 @@
 - (void)dealloc {
     [itemsViewController release];
     [window release];
-    
+    [navController release];    
     [super dealloc];
 }
 

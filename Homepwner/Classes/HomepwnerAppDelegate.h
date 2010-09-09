@@ -12,6 +12,7 @@
 @interface HomepwnerAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     ItemsViewController *itemsViewController;
+    UINavigationController *navController;
     
 }
 
