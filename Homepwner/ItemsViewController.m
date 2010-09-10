@@ -55,6 +55,11 @@
 
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
+
 #pragma mark -
 #pragma mark TableView Delegeate Methods
 
@@ -80,6 +85,7 @@
         detailViewController = [[ItemDetailViewController alloc] init];
     }
     
+    [detailViewController setEditingPossession:[possessions objectAtIndex:[indexPath row]]];
     
     [[self navigationController] pushViewController:detailViewController animated:YES];
 }

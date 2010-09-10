@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
+@class Possession;
+
 @interface ItemDetailViewController : UIViewController {
 
 
@@ -16,7 +18,11 @@
     IBOutlet UITextField *serialNumberField;
     IBOutlet UITextField *valueField;
     IBOutlet UILabel     *dateLabel;
+    
+    Possession *editingPossession;
 
 }
+
+@property (nonatomic, assign) Possession *editingPossession;
 
 @end

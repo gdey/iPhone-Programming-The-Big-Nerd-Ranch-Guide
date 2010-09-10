@@ -7,10 +7,11 @@
 //
 
 #import "ItemDetailViewController.h"
-
+#import "Possession.h"
 
 @implementation ItemDetailViewController
 
+@synthesize editingPossession;
 
 - (id) init {
     [super initWithNibName:nil bundle:nil];
@@ -41,6 +42,42 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [nameField setText:[editingPossession possessionName]];
+    [serialNumberField setText:[editingPossession serialNumber]];
+    [valueField setText:[NSString stringWithFormat:@"%d", [editingPossession valueInDollars]]];
+    
+    
+        // Create a NSDateFormatter
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+        // Use filtered NSDate object to set dateLabel contents
+    [dateLabel setText:[dateFormatter stringFromDate:[editingPossession dateCreated]]];
+    
+        // Change the navigation item to display name of possession
+    [[self navigationItem] setTitle:[editingPossession possessionName]];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [nameField resignFirstResponder];
+    [serialNumberField resignFirstResponder];
+    [valueField resignFirstResponder];
+    
+        // "Save" changes to the editingPossession
+    [editingPossession setPossessionName:[nameField text]];
+    [editingPossession setSerialNumber:[serialNumberField text]];
+    [editingPossession setValueInDollars:[[valueField text] intValue]];
+}
+     
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
