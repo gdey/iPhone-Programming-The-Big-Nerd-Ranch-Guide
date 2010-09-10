@@ -18,6 +18,7 @@
 		7A001EE61232E35800F278C7 /* Possession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A001EE51232E35800F278C7 /* Possession.m */; };
 		7A001F651237DA2C00F278C7 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A001F631237DA2C00F278C7 /* ItemDetailViewController.m */; };
 		7A001F661237DA2C00F278C7 /* ItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A001F641237DA2C00F278C7 /* ItemDetailViewController.xib */; };
+		7A001FF0123A658200F278C7 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A001FEF123A658200F278C7 /* ImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		7A001F621237DA2C00F278C7 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
 		7A001F631237DA2C00F278C7 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 		7A001F641237DA2C00F278C7 /* ItemDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemDetailViewController.xib; path = Classes/ItemDetailViewController.xib; sourceTree = "<group>"; };
+		7A001FEE123A658200F278C7 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		7A001FEF123A658200F278C7 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Homepwner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Homepwner-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +61,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7A001FEE123A658200F278C7 /* ImageCache.h */,
+				7A001FEF123A658200F278C7 /* ImageCache.m */,
 				7A001F621237DA2C00F278C7 /* ItemDetailViewController.h */,
 				7A001F631237DA2C00F278C7 /* ItemDetailViewController.m */,
 				7A001EE41232E35800F278C7 /* Possession.h */,
@@ -180,6 +185,7 @@
 				7A001EC11232DE6000F278C7 /* ItemsViewController.m in Sources */,
 				7A001EE61232E35800F278C7 /* Possession.m in Sources */,
 				7A001F651237DA2C00F278C7 /* ItemDetailViewController.m in Sources */,
+				7A001FF0123A658200F278C7 /* ImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

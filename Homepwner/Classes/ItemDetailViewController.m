@@ -14,8 +14,13 @@
 @synthesize editingPossession;
 
 - (id) init {
-    [super initWithNibName:nil bundle:nil];
+    [super initWithNibName:@"ItemDetailViewController" bundle:nil];
     
+    UIBarButtonItem *cameraBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera 
+                                                                                         target:self 
+                                                                                         action:@selector(takePicture:)];
+    [[self navigationItem] setRightBarButtonItem:cameraBarButtonItem];
+    [cameraBarButtonItem release];
     return self;
     
 }
@@ -42,6 +47,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+
+
 
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -79,6 +87,30 @@
 }
      
 
+- (void)takePicture:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    } else {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+    [imagePicker setDelegate:self];
+    
+    [self presentModalViewController:imagePicker animated:YES];
+    
+    [imagePicker release];
+
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [imageView setImage:image];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -102,6 +134,9 @@
     
     [dateLabel release];
     dateLabel = nil;
+    
+    [imageView release];
+    imageView = nil;
 }
 
 
@@ -111,6 +146,7 @@
     [serialNumberField release];
     [valueField release];
     [dateLabel release];
+    [imageView release];
     [super dealloc];
 }
 
