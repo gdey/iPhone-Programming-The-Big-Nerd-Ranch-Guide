@@ -11,7 +11,7 @@
 
 @implementation Possession
 
-@synthesize possessionName, serialNumber, valueInDollars, dateCreated;
+@synthesize possessionName, serialNumber, valueInDollars, dateCreated, imageKey;
 
 + (id)newRandomPossession 
 {
@@ -77,6 +77,14 @@
 	NSString *descriptionString = [[[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, Recorded on %@",
 																 possessionName, serialNumber, valueInDollars, dateCreated] autorelease];
 	return descriptionString;
+}
+
+- (void) dealloc {
+	[imageKey release];
+	[possessionName release];
+	[serialNumber release];
+	[dateCreated release];
+	[super dealloc];
 }
 
 @end

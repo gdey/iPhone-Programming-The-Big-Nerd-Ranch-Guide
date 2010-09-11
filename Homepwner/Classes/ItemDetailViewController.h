@@ -19,11 +19,14 @@
     IBOutlet UITextField *valueField;
     IBOutlet UILabel     *dateLabel;
     IBOutlet UIImageView *imageView;
+    IBOutlet UIButton    *clearImageButton;
     
     Possession *editingPossession;
 
 }
 
 @property (nonatomic, assign) Possession *editingPossession;
+
+- (IBAction) clearImage:(id)sender;
 
 @end

@@ -27,6 +27,9 @@ static ImageCache *sharedImageCache;
 }
 
 - (UIImage *)imageForKey:(NSString *)key {
+    if (!key) {
+        return nil;
+    }
     return [dictionary objectForKey:key];
 }
 
