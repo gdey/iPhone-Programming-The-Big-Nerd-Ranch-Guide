@@ -24,17 +24,33 @@ static ImageCache *sharedImageCache;
 
 - (void)setImage:(UIImage *)i forKey:(NSString *)key {
     [dictionary setObject:i forKey:key];
+    
+    NSString *imagePath = pathInDocumentDirectory(key);
+    
+        // Turn image into JPEG data
+    NSData *d = UIImageJPEGRepresentation(i, 0.5);
+    [d writeToFile:imagePath atomically:YES];
 }
 
 - (UIImage *)imageForKey:(NSString *)key {
     if (!key) {
         return nil;
     }
-    return [dictionary objectForKey:key];
+    UIImage *image= [dictionary objectForKey:key];
+    if (!image) {
+        image = [UIImage imageWithContentsOfFile:pathInDocumentDirectory(key)];
+        if (image) {
+            [dictionary setObject:image forKey:key];
+        }
+    }
+    return image;
 }
 
 -(void)deleteImageForKey:(NSString *)key {
+    
     [dictionary removeObjectForKey:key];
+    NSString *imagePath = pathInDocumentDirectory(key);
+    [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
 }
 
 
