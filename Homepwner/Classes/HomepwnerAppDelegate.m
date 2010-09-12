@@ -13,6 +13,15 @@
 
 @synthesize window;
 
+#pragma mark -
+#pragma mark Data saving/loading functions
+
+- (void) archivePossessions {
+    NSString *possessionPath = [self possessionArrayPath];
+    NSMutableArray *possessionsArray = [itemsViewController possessions];
+    [NSKeyedArchiver archiveRootObject:possessionsArray toFile:possessionPath];
+}
+
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -58,6 +67,7 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+    [self archivePossessions];
 }
 
 
@@ -65,6 +75,7 @@
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
+
 }
 
 
@@ -81,9 +92,8 @@
      See also applicationDidEnterBackground:.
      */
     
-    NSString *possessionPath = [self possessionArrayPath];
-    NSMutableArray *possessionsArray = [itemsViewController possessions];
-    [NSKeyedArchiver archiveRootObject:possessionsArray toFile:possessionPath];
+
+    [self archivePossessions];
 }
 
 - (NSString *)possessionArrayPath {
