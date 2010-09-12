@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Possession : NSObject 
+@interface Possession : NSObject <NSCoding>
 {
 	NSString *possessionName;
 	NSString *serialNumber;

@@ -41,6 +41,28 @@
 	return newPossession;
 }
 
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+        // For each instance variable, archive it under its variable name
+    [aCoder encodeObject:possessionName forKey:@"possessionName"];
+    [aCoder encodeObject:serialNumber forKey:@"serialNumber"];
+    [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
+    [aCoder encodeObject:dateCreated forKey:@"dateCreated"];
+    [aCoder encodeObject:imageKey forKey:@"imageKey"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    [super init];
+    
+    [self setPossessionName:[aDecoder decodeObjectForKey:@"possessionName"]];
+    [self setSerialNumber:[aDecoder decodeObjectForKey:@"serialNumber"]];
+    [self setValueInDollars:[aDecoder decodeIntForKey:@"vlueInDollars"]];
+    [self setImageKey:[aDecoder decodeObjectForKey:@"imageKey"]];
+    
+    dateCreated = [[aDecoder decodeObjectForKey:@"dateCreated"] retain];
+    
+    return self;
+}
+
 - (id)initWithPossessionName:(NSString *)name 
 							valueInDollars:(int)value
 								serialNumber:(NSString *)sNumber

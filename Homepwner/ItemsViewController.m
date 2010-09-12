@@ -12,18 +12,12 @@
 
 @implementation ItemsViewController
 
+@synthesize possessions;
 
 - (id) init {
     
         // Call the suersclasses's designated initializer
     [super initWithStyle:UITableViewStyleGrouped];
-    
-        // Create an array of 10 random possession objects
-    possessions = [[NSMutableArray alloc] initWithCapacity:10];
-    
-    for (int i = 0; i < 10; i++) {
-        [possessions addObject:[Possession newRandomPossession]];
-    }
     
     [[self navigationItem] setTitle:@"Homepwner"];
     [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
@@ -128,6 +122,10 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [possessions removeObjectAtIndex:[indexPath row]];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        [possessions addObject:[Possession newRandomPossession]];
+        [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        [self tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

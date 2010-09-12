@@ -19,15 +19,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
+    
+    NSString *possessionPath = [self possessionArrayPath];
+    
+    NSMutableArray *possessionArray = [NSKeyedUnarchiver unarchiveObjectWithFile:possessionPath];
+    
+    if(!possessionArray){
+        possessionArray = [[NSMutableArray alloc] init];
+    }
+    
+    
     // Override point for customization after application launch.
 	// Create an ItemsViewController
     itemsViewController = [[ItemsViewController alloc] init];
+    
+    [itemsViewController setPossessions:possessionArray];
+    
     
         // Place ItesmViewController's table view int he window hierarchy
     navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
     [window addSubview:[navController view]];
     [window makeKeyAndVisible];
-	
+	NSLog(@"Phone number is: %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"SBFormattedPhoneNumber"]);
 	return YES;
 }
 
@@ -67,8 +80,15 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+    
+    NSString *possessionPath = [self possessionArrayPath];
+    NSMutableArray *possessionsArray = [itemsViewController possessions];
+    [NSKeyedArchiver archiveRootObject:possessionsArray toFile:possessionPath];
 }
 
+- (NSString *)possessionArrayPath {
+    return pathInDocumentDirectory(@"Possessions.data");
+}
 
 #pragma mark -
 #pragma mark Memory management

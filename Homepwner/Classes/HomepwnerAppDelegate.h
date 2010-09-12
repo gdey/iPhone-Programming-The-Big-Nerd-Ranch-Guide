@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class ItemsViewController;
+
 @interface HomepwnerAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     ItemsViewController *itemsViewController;
     UINavigationController *navController;
     
 }
+
+- (NSString *)possessionArrayPath;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
