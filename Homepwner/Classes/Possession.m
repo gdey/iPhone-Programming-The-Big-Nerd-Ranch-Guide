@@ -51,7 +51,17 @@
 
 - (UIImage *) _generateThumbnailFrom:(UIImage *)image {
         // Generate a new thumbnail
+    
+    float height = [image size].height;
+    float width = [image size].width;
+
     CGRect imageRect = CGRectMake(0,0,70,70);
+    if (height > width) {
+        imageRect.size.width = 70 * width/height;
+    } else {
+        imageRect.size.height = 70 * height/width;
+    }
+
     UIGraphicsBeginImageContext(imageRect.size);
     [image drawInRect:imageRect];
     UIImage *thumb = UIGraphicsGetImageFromCurrentImageContext();
