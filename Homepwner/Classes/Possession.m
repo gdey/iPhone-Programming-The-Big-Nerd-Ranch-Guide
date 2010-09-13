@@ -8,6 +8,7 @@
 
 #import "Possession.h"
 #import "ImageCache.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation Possession
 
@@ -62,9 +63,14 @@
         imageRect.size.height = 70 * height/width;
     }
 
+    
+
     UIGraphicsBeginImageContext(imageRect.size);
     [image drawInRect:imageRect];
     UIImage *thumb = UIGraphicsGetImageFromCurrentImageContext();
+
+    
+    
     [[ImageCache sharedImageCache] setImage:thumb forKey:[self imageThumbKey]];
     return thumb;
 }

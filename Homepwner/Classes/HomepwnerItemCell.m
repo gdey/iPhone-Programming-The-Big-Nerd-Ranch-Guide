@@ -8,6 +8,7 @@
 
 #import "HomepwnerItemCell.h"
 #import "Possession.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @implementation HomepwnerItemCell
@@ -25,6 +26,31 @@
         [[self contentView] addSubview:imageView];
         
         [imageView setContentMode:UIViewContentModeScaleAspectFit];
+        
+        [[imageView layer] setCornerRadius:5.0];
+        [[imageView layer] setMasksToBounds:YES];
+        [[imageView layer] setBorderColor:[[UIColor lightGrayColor] CGColor]];
+        [[imageView layer] setBorderWidth:1.0];
+        
+            // Glossy 
+        CAGradientLayer *shineLayer = [CAGradientLayer layer];
+        [shineLayer  setFrame:[[imageView layer] bounds] ];
+        [shineLayer setColors: [NSArray arrayWithObjects:
+                                (id)[[UIColor colorWithWhite:1.0f alpha:0.4f]  CGColor],
+                                (id)[[UIColor colorWithWhite:1.0f alpha:0.2f]  CGColor],
+                                (id)[[UIColor colorWithWhite:0.75f alpha:0.2f] CGColor],
+                                (id)[[UIColor colorWithWhite:0.4f alpha:0.2f]  CGColor],
+                                (id)[[UIColor colorWithWhite:1.0f alpha:0.4f]  CGColor],
+                                nil]];
+        [shineLayer setLocations: [NSArray arrayWithObjects:
+                                   [NSNumber numberWithFloat:0.0f],
+                                   [NSNumber numberWithFloat:0.5f],
+                                   [NSNumber numberWithFloat:0.5f],
+                                   [NSNumber numberWithFloat:0.8f],
+                                   [NSNumber numberWithFloat:1.0f],
+                                   nil]];
+        [[imageView layer] addSublayer:shineLayer];        
+        
         
         serialLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         [[self contentView] addSubview:serialLabel];
@@ -63,7 +89,7 @@
     
     accessoryMode = [possession accessoryMode];
     [imageView setImage:[possession thumbnail]];
-}
+  }
 
 #pragma mark -
 #pragma mark View Methods
@@ -101,7 +127,7 @@
     
     [dateCreatedLabel setFrame:innerFrame];
     
-    if (accessoryMode) {
+    if (!accessoryMode) {
         [serialLabel setHidden:YES];
         [nameLabel setHidden:NO];
         [dateCreatedLabel setHidden:YES];

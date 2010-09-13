@@ -20,6 +20,7 @@
 		7A001F661237DA2C00F278C7 /* ItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A001F641237DA2C00F278C7 /* ItemDetailViewController.xib */; };
 		7A001FF0123A658200F278C7 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A001FEF123A658200F278C7 /* ImageCache.m */; };
 		7A12E250123DD251006A0CBE /* HomepwnerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A12E24F123DD251006A0CBE /* HomepwnerItemCell.m */; };
+		7A12E30C123DFC45006A0CBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A12E30B123DFC45006A0CBE /* QuartzCore.framework */; };
 		7A30E227123C740400767A41 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A30E226123C740400767A41 /* FileHelpers.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		7A001FEF123A658200F278C7 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 		7A12E24E123DD251006A0CBE /* HomepwnerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepwnerItemCell.h; sourceTree = "<group>"; };
 		7A12E24F123DD251006A0CBE /* HomepwnerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepwnerItemCell.m; sourceTree = "<group>"; };
+		7A12E30B123DFC45006A0CBE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7A30E225123C740400767A41 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		7A30E226123C740400767A41 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Homepwner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Homepwner-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				7A12E30C123DFC45006A0CBE /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +134,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				7A12E30B123DFC45006A0CBE /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
