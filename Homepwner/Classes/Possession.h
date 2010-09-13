@@ -22,7 +22,7 @@
 @property (nonatomic, copy) NSString *serialNumber;
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly) NSDate *dateCreated;
-@property (nonatomic, copy) NSString *imageKey;
+@property (nonatomic, readonly) NSString *imageKey;
 
 + (id)newRandomPossession;
 
@@ -31,4 +31,7 @@
 				serialNumber:(NSString *)sNumber;
 
 - (id)initWithPossessionName:(NSString *)name;
+- (UIImage *)image;
+- (void)setImage:(UIImage *)image;
+- (UIImage *)thumbnail;
 @end

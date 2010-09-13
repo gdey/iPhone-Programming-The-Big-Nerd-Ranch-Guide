@@ -8,7 +8,7 @@
 
 #import "ItemDetailViewController.h"
 #import "Possession.h"
-#import "ImageCache.h"
+
 
 @implementation ItemDetailViewController
 
@@ -73,7 +73,7 @@
         // Change the navigation item to display name of possession
     [[self navigationItem] setTitle:[editingPossession possessionName]];
     
-    UIImage *image = [[ImageCache sharedImageCache] imageForKey:[editingPossession imageKey]];
+    UIImage *image = [editingPossession image];
     
     [imageView setImage:image];
     [clearImageButton setEnabled: (image)? YES : NO ];
@@ -97,8 +97,7 @@
 #pragma mark Actions
 
 - (IBAction) clearImage:(id)sender {
-    [[ImageCache sharedImageCache]  deleteImageForKey:[editingPossession imageKey]];
-    [editingPossession setImageKey:nil];
+    [editingPossession setImage:nil];
     [imageView setImage:nil];
     [sender setEnabled:NO];
 }
@@ -126,22 +125,8 @@
     
     
     
-    NSString *oldKey = [editingPossession imageKey];
-    if( oldKey ){
-        [[ImageCache sharedImageCache] deleteImageForKey:oldKey];
-    }
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-        // Create a CFUUID object 
-    CFUUIDRef newUniqueID = CFUUIDCreate(kCFAllocatorDefault);
-    CFStringRef newUniqueIDString = CFUUIDCreateString(kCFAllocatorDefault, newUniqueID);
-    
-    [editingPossession setImageKey:(NSString *)newUniqueIDString];
-    CFRelease(newUniqueID);
-    CFRelease(newUniqueIDString);
-    [[ImageCache sharedImageCache] setImage:image forKey:[editingPossession imageKey]];
-    
-    
+    [editingPossession setImage:image];
     [imageView setImage:image];
     [clearImageButton setEnabled:YES];
     [self dismissModalViewControllerAnimated:YES];

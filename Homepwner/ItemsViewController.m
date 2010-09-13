@@ -8,6 +8,7 @@
 
 #import "ItemsViewController.h"
 #import "ItemDetailViewController.h"
+#import "HomepwnerItemCell.h"
 #import "Possession.h"
 
 @implementation ItemsViewController
@@ -96,24 +97,26 @@
                          
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Create an instance of UITableViewCell, with default apperance
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    if(!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-                                       reuseIdentifier:@"UITableViewCell"] autorelease];
-    }
     
-        // Set the text on the cell with the description of the possession
-        // that is at the nth index of the possessions, where n = row this cell
-        // will appear in on the tableView
-    if ([indexPath row] < [possessions count]) {
-        
-        Possession *p = (Possession *)[possessions objectAtIndex:[indexPath row]];
-        [[cell textLabel] setText: [p description]];
-    } else {
+    if ([indexPath row] >= [possessions count]) {
+            // We need to show the add button.
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+        if(!cell) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                           reuseIdentifier:@"UITableViewCell"] autorelease];
+        }
         [[cell textLabel] setText:@"Add New Item"];
+        return cell;
     }
-
     
+   
+        // Well we need to show a possession item cell
+    HomepwnerItemCell *cell = (HomepwnerItemCell *)[tableView dequeueReusableCellWithIdentifier:@"HomepwnerItemCell"];
+    if(!cell) {
+        cell = [[[HomepwnerItemCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                       reuseIdentifier:@"HomepwnerItemCell"] autorelease];
+    }
+    [cell setPossession:(Possession *)[possessions objectAtIndex:[indexPath row]]];
     return cell;
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "Possession.h"
-
+#import "ImageCache.h"
 
 @implementation Possession
 
@@ -41,6 +41,59 @@
 	return newPossession;
 }
 
+
+- (NSString *)imageThumbKey {
+    return [NSString stringWithFormat:@"%@_thumb",[self imageKey]];
+}
+
+- (UIImage *) _generateThumbnailFrom:(UIImage *)image {
+        // Generate a new thumbnail
+    CGRect imageRect = CGRectMake(0,0,70,70);
+    UIGraphicsBeginImageContext(imageRect.size);
+    [image drawInRect:imageRect];
+    UIImage *thumb = UIGraphicsGetImageFromCurrentImageContext();
+    [[ImageCache sharedImageCache] setImage:thumb forKey:[self imageThumbKey]];
+    return thumb;
+}
+- (void) setImage:(UIImage *)image {
+    
+    if (imageKey) {
+        [[ImageCache sharedImageCache] deleteImageForKey:imageKey];
+        [[ImageCache sharedImageCache] deleteImageForKey:[self imageThumbKey]];
+    }
+    [imageKey release];
+    imageKey = nil;
+    if (!image) {
+        return;
+    }
+        // Create a CFUUID object 
+    CFUUIDRef newUniqueID = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef newUniqueIDString = CFUUIDCreateString(kCFAllocatorDefault, newUniqueID);
+    imageKey = (NSString *)newUniqueIDString;
+    CFRelease(newUniqueID);
+    CFRelease(newUniqueIDString);
+    
+    [[ImageCache sharedImageCache] setImage:image forKey:imageKey];
+    [self _generateThumbnailFrom:image];
+    
+}
+
+- (UIImage *)image {
+    return [[ImageCache sharedImageCache] imageForKey:[self imageKey]];
+}
+
+- (UIImage *)thumbnail {
+    UIImage *thumb = [[ImageCache sharedImageCache] imageForKey:[self imageThumbKey]];
+    if (!thumb) {
+            // Check to see if full image exists.
+        UIImage *image = [[ImageCache sharedImageCache] imageForKey:[self imageKey]];
+        if (image) {
+            thumb = [self _generateThumbnailFrom:image];
+        }
+    }
+    return thumb;
+}
+
 - (void)encodeWithCoder:(NSCoder *)aCoder {
         // For each instance variable, archive it under its variable name
     [aCoder encodeObject:possessionName forKey:@"possessionName"];
@@ -56,7 +109,7 @@
     [self setPossessionName:[aDecoder decodeObjectForKey:@"possessionName"]];
     [self setSerialNumber:[aDecoder decodeObjectForKey:@"serialNumber"]];
     [self setValueInDollars:[aDecoder decodeIntForKey:@"vlueInDollars"]];
-    [self setImageKey:[aDecoder decodeObjectForKey:@"imageKey"]];
+    imageKey = [[aDecoder decodeObjectForKey:@"imageKey"] retain];
     
     dateCreated = [[aDecoder decodeObjectForKey:@"dateCreated"] retain];
     
