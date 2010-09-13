@@ -14,8 +14,15 @@
 
     UILabel *valueLabel;
     UILabel *nameLabel;
+    UILabel *serialLabel;
+    UILabel *dateCreatedLabel;
     UIImageView *imageView;
+    BOOL accessoryMode;
+   
+    
 }
+
+
 
 - (void) setPossession:(Possession *)possession;
 

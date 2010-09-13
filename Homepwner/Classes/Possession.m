@@ -11,7 +11,7 @@
 
 @implementation Possession
 
-@synthesize possessionName, serialNumber, valueInDollars, dateCreated, imageKey;
+@synthesize possessionName, serialNumber, valueInDollars, dateCreated, imageKey, accessoryMode;
 
 + (id)newRandomPossession 
 {
@@ -41,6 +41,9 @@
 	return newPossession;
 }
 
+- (void)toggleAccessoryMode {
+    [self setAccessoryMode:![self accessoryMode]];
+}
 
 - (NSString *)imageThumbKey {
     return [NSString stringWithFormat:@"%@_thumb",[self imageKey]];
@@ -60,9 +63,9 @@
     if (imageKey) {
         [[ImageCache sharedImageCache] deleteImageForKey:imageKey];
         [[ImageCache sharedImageCache] deleteImageForKey:[self imageThumbKey]];
+        [imageKey release];
+        imageKey = nil;
     }
-    [imageKey release];
-    imageKey = nil;
     if (!image) {
         return;
     }
@@ -70,6 +73,7 @@
     CFUUIDRef newUniqueID = CFUUIDCreate(kCFAllocatorDefault);
     CFStringRef newUniqueIDString = CFUUIDCreateString(kCFAllocatorDefault, newUniqueID);
     imageKey = (NSString *)newUniqueIDString;
+    [imageKey retain];
     CFRelease(newUniqueID);
     CFRelease(newUniqueIDString);
     
@@ -112,7 +116,7 @@
     imageKey = [[aDecoder decodeObjectForKey:@"imageKey"] retain];
     
     dateCreated = [[aDecoder decodeObjectForKey:@"dateCreated"] retain];
-    
+    accessoryMode = NO;
     return self;
 }
 
@@ -132,7 +136,7 @@
 	[self setSerialNumber:sNumber]; 
 	[self setValueInDollars:value];
 	dateCreated = [[NSDate alloc] init];
-	
+	accessoryMode = NO;
 	// Return the address of the newly initialized object
 	return self;
 }

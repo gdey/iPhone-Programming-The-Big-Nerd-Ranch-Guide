@@ -16,11 +16,13 @@
 	int valueInDollars;
 	NSDate *dateCreated;
 	NSString *imageKey;
+    BOOL accessoryMode;
 	
 }
 @property (nonatomic, copy) NSString *possessionName;
 @property (nonatomic, copy) NSString *serialNumber;
 @property (nonatomic) int valueInDollars;
+@property (nonatomic) BOOL accessoryMode;
 @property (nonatomic, readonly) NSDate *dateCreated;
 @property (nonatomic, readonly) NSString *imageKey;
 
@@ -34,4 +36,5 @@
 - (UIImage *)image;
 - (void)setImage:(UIImage *)image;
 - (UIImage *)thumbnail;
+- (void) toggleAccessoryMode;
 @end

@@ -85,6 +85,13 @@
     [[self navigationController] pushViewController:detailViewController animated:YES];
 }
 
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    
+    [(Possession *)[possessions objectAtIndex:[indexPath row]] toggleAccessoryMode];
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
 #pragma mark -
 #pragma mark TableView DataSource Methods
 
@@ -117,6 +124,7 @@
                                        reuseIdentifier:@"HomepwnerItemCell"] autorelease];
     }
     [cell setPossession:(Possession *)[possessions objectAtIndex:[indexPath row]]];
+    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     return cell;
 }
 
