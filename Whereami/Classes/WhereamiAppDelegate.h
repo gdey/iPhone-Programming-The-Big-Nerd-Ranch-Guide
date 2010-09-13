@@ -12,7 +12,10 @@
 
 @interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
     UIWindow *window;
+        //   NSMutableArray *mapPointArray;
     CLLocationManager *locationManager;
+    
+    
     
     IBOutlet MKMapView *mapView;
     IBOutlet UIActivityIndicatorView *activityIndicator;

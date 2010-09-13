@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface MapPoint : NSObject <MKAnnotation,MKReverseGeocoderDelegate> {
+@interface MapPoint : NSObject <MKAnnotation,MKReverseGeocoderDelegate,NSCoding> {
 
     NSString *title;
     CLLocationCoordinate2D coordinate;

@@ -15,14 +15,37 @@
 @synthesize mapView;
 @synthesize activityIndicator;
 @synthesize locationField;
+@synthesize segmentControl;
+
+#pragma mark -
+#pragma mark config
+
+- (NSString *)mapPointsArrayPath {
+    return pathInDocumentDirectory(@"mapPoints.dat");
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
+
+- (void) saveMapPoints {
+    
+    NSMutableArray *a = [[NSMutableArray alloc] initWithCapacity:[[mapView annotations] count]];
+    
+    for (id obj in [mapView annotations]) {
+        if ([obj isKindOfClass:[MapPoint class]]) {
+           [a addObject:(MapPoint *)obj];
+        }
+    }
+    [NSKeyedArchiver archiveRootObject:[NSArray arrayWithArray:a] toFile:[self mapPointsArrayPath]];
+    [a release];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
 	
+ 
+    
         // Create location manager object - 
     locationManager = [[CLLocationManager alloc] init];
     
@@ -47,6 +70,18 @@
         // Tell our manager to start looking for heading inforamtion
     [locationManager startUpdatingHeading];
     
+        // Load the Map Points from previous sessions
+    NSArray *mapPoints = (NSArray *)[NSKeyedUnarchiver unarchiveObjectWithFile:[self mapPointsArrayPath]];
+    if(!mapPoints){
+        mapPoints = [[NSMutableArray alloc] init];
+    } else {
+        [mapView addAnnotations:mapPoints];
+    }
+
+    
+        // Now we need to add each mp to the map view
+
+    
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -58,6 +93,7 @@
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
+    [self saveMapPoints];
 }
 
 
@@ -66,6 +102,7 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+    
 }
 
 
@@ -88,6 +125,7 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+    [self saveMapPoints];
 }
 
 #pragma mark -
@@ -165,6 +203,7 @@
     MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[newLocation coordinate] andTitle:[locationField text]];
     [mapView addAnnotation:mp];
     [mp release];
+    
     
     [self foundLocation];
     
