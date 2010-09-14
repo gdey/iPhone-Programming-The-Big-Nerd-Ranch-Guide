@@ -15,6 +15,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		7A43FF94123EEDB1008ADF80 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43FF93123EEDB1008ADF80 /* Line.m */; };
 		7A43FF97123EEE76008ADF80 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43FF96123EEE76008ADF80 /* TouchDrawView.m */; };
+		7A43FFD7123F0F46008ADF80 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A43FFD5123F0F46008ADF80 /* FileHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		7A43FF93123EEDB1008ADF80 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		7A43FF95123EEE76008ADF80 /* TouchDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDrawView.h; sourceTree = "<group>"; };
 		7A43FF96123EEE76008ADF80 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
+		7A43FFD5123F0F46008ADF80 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
+		7A43FFD6123F0F46008ADF80 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TouchTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TouchTracker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +54,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7A43FFD5123F0F46008ADF80 /* FileHelpers.m */,
+				7A43FFD6123F0F46008ADF80 /* FileHelpers.h */,
 				1D3623240D0F684500981E51 /* TouchTrackerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TouchTrackerAppDelegate.m */,
 				7A43FF92123EEDB1008ADF80 /* Line.h */,
@@ -173,6 +178,7 @@
 				1D3623260D0F684500981E51 /* TouchTrackerAppDelegate.m in Sources */,
 				7A43FF94123EEDB1008ADF80 /* Line.m in Sources */,
 				7A43FF97123EEE76008ADF80 /* TouchDrawView.m in Sources */,
+				7A43FFD7123F0F46008ADF80 /* FileHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

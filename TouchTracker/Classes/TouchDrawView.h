@@ -17,4 +17,8 @@
     
 }
 
+
+- (void) setCompleatedLines:(NSArray *)lines;
+- (NSArray *)compleatedLines;
+
 @end

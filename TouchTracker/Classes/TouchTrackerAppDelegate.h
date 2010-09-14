@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class TouchDrawView;
+
 @interface TouchTrackerAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-
+    IBOutlet TouchDrawView *touchView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

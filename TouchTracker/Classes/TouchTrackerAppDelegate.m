@@ -7,6 +7,7 @@
 //
 
 #import "TouchTrackerAppDelegate.h"
+#import "TouchDrawView.h"
 
 @implementation TouchTrackerAppDelegate
 
@@ -19,6 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+    
+    
+    NSArray *lines = (NSArray *)[NSKeyedUnarchiver unarchiveObjectWithFile:pathInDocumentDirectory(@"lines.data")];
+    [touchView setCompleatedLines:lines];
     
     [window makeKeyAndVisible];
     
@@ -39,6 +44,8 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+    NSArray *lines = [touchView compleatedLines];
+    [NSKeyedArchiver archiveRootObject:lines toFile:pathInDocumentDirectory(@"lines.data")];
 }
 
 
@@ -61,6 +68,9 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+    NSArray *lines = [touchView compleatedLines];
+    [NSKeyedArchiver archiveRootObject:lines toFile:pathInDocumentDirectory(@"lines.data")];
+
 }
 
 

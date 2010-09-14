@@ -28,6 +28,17 @@
     return self;
 }
 
+- (void) setCompleatedLines:(NSArray *)lines {
+    if (lines && completeLines != lines) {
+        [completeLines release];
+        completeLines = [lines mutableCopy];
+    }
+}
+
+- (NSArray *)compleatedLines {
+    return [NSArray arrayWithArray:completeLines];
+}
+
 - (void)clearAll {
         // Clear the containers
     [linesInProgress removeAllObjects];
@@ -76,7 +87,7 @@
         
         [linesInProgress setObject:line forKey:key];
         
-            // [line release];
+        [line release];
     }
 }
 
