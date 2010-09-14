@@ -8,17 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-
+@class Circle;
 @interface TouchDrawView : UIView {
 
     
     NSMutableDictionary *linesInProgress;
+    NSMutableDictionary *circlesInProgressBegin;
+    NSMutableDictionary *circlesInProgressEnd;
+    Circle              *workingCircle;
+    NSMutableArray *completeCircles;
     NSMutableArray *completeLines;
+    BOOL isDrawingLines;
     
 }
 
-
+@property (nonatomic) BOOL isDrawingLines;
 - (void) setCompleatedLines:(NSArray *)lines;
 - (NSArray *)compleatedLines;
 
+- (void) setCompleatedCircles:(NSArray *)circles;
+- (NSArray *)compleatedCircles;
 @end

@@ -13,6 +13,13 @@
 
 @synthesize window;
 
+#pragma mark -
+#pragma mark Actions
+
+-(IBAction)selectionChanged:(id)sender {
+    NSLog(@"Changing drawing type: %d",[(UISegmentedControl *)sender selectedSegmentIndex]);
+    [touchView setIsDrawingLines: ([(UISegmentedControl *)sender selectedSegmentIndex] == 0)];
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -24,7 +31,12 @@
     
     NSArray *lines = (NSArray *)[NSKeyedUnarchiver unarchiveObjectWithFile:pathInDocumentDirectory(@"lines.data")];
     [touchView setCompleatedLines:lines];
+
+    NSArray *circles = (NSArray *)[NSKeyedUnarchiver unarchiveObjectWithFile:pathInDocumentDirectory(@"circles.data")];
+    [touchView setCompleatedCircles:circles];
+
     
+    [touchView setIsDrawingLines:([drawingType selectedSegmentIndex] == 0)];
     [window makeKeyAndVisible];
     
     return YES;
@@ -46,6 +58,9 @@
      */
     NSArray *lines = [touchView compleatedLines];
     [NSKeyedArchiver archiveRootObject:lines toFile:pathInDocumentDirectory(@"lines.data")];
+    NSArray *circles = [touchView compleatedCircles];
+    [NSKeyedArchiver archiveRootObject:circles toFile:pathInDocumentDirectory(@"circles.data")];
+
 }
 
 
@@ -70,6 +85,9 @@
      */
     NSArray *lines = [touchView compleatedLines];
     [NSKeyedArchiver archiveRootObject:lines toFile:pathInDocumentDirectory(@"lines.data")];
+    NSArray *circles = [touchView compleatedCircles];
+    [NSKeyedArchiver archiveRootObject:circles toFile:pathInDocumentDirectory(@"circles.data")];
+
 
 }
 
