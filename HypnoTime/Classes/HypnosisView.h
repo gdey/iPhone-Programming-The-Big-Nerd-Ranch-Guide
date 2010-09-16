@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BoxLayerDelegate.h"
 
-
+@class CALayer;
 @interface HypnosisView : UIView {
 
     float xShift, yShift;
     UIColor *stripeColor;
-    
+    CALayer *boxLayer;
+    BoxLayerDelegate *boxLayerDelegate;
 }
 
 

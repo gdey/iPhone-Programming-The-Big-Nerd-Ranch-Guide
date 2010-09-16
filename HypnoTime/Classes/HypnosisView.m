@@ -7,7 +7,7 @@
 //
 
 #import "HypnosisView.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation HypnosisView
 
@@ -19,11 +19,54 @@
         xShift = 0.0;
         yShift = 0.0;
         [self setStripeColor:[UIColor lightGrayColor]];
+            // Create a new layer object;
+        boxLayer = [[CALayer alloc] init];
+        boxLayerDelegate = [[BoxLayerDelegate alloc] init];        
+            // Give it a size
+
+        [boxLayer setBounds:CGRectMake(0.0, 0.0, 85.0, 85.0)];
+        
+        
+            // Give it a location
+        [boxLayer setPosition:CGPointMake(160.0, 100.0 )];
+        
+            // Make it half-transparent red, the background colour.
+        [boxLayer setBackgroundColor:[[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5] CGColor]];
+        
+        
+            //UIImage *layerImage = [UIImage imageNamed:@"Hypno.png"];
+        
+            // [boxLayer setContents:(id)[layerImage CGImage]];
+            //[boxLayer setContentsRect:CGRectMake(-0.1, -0.1, 1.2, 1.2)];
+        
+            //[boxLayer setContentsGravity:kCAGravityResizeAspect];
+        [boxLayer setDelegate:boxLayerDelegate];
+        [[self layer] addSublayer:boxLayer];
+        
+        [boxLayer release];
+            [boxLayer setNeedsDisplay];
     }
     
     return self;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *t = [touches anyObject];
+    CGPoint p = [t locationInView:self];
+    [boxLayer setPosition:p];
+        [boxLayer setNeedsDisplay];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *t = [touches anyObject];
+    CGPoint p = [t locationInView:self];
+    [CATransaction begin];
+    [CATransaction setValue: [NSNumber numberWithBool:YES] 
+                    forKey: kCATransactionDisableActions];
+    [boxLayer setPosition:p];
+        [boxLayer setNeedsDisplay];
+    [CATransaction commit];
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -121,6 +164,8 @@
 
 - (void)dealloc {
     [stripeColor release];
+    [boxLayer release];
+    [boxLayerDelegate release];
     [super dealloc];
 }
 
