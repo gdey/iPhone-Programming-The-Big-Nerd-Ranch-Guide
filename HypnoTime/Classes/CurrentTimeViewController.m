@@ -89,8 +89,22 @@
      * create a bounce animation
      */
     CAKeyframeAnimation *bounce = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];  
     
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    
+    
+    [opacityAnimation setValues:[NSArray arrayWithObjects:
+                                 [NSNumber numberWithFloat:1],
+                                 [NSNumber numberWithFloat:0.5],
+                                 [NSNumber numberWithFloat:0.3],
+                                 [NSNumber numberWithFloat:0.5],
+                                 [NSNumber numberWithFloat:0.3],
+                                 [NSNumber numberWithFloat:1],
+                                 nil]];
+     
         // Create the values it will pass through
+    
     CATransform3D forward = CATransform3DMakeScale(1.3, 1.3, 1);
     CATransform3D back = CATransform3DMakeScale(0.7, 0.7, 1);
     CATransform3D forward2 = CATransform3DMakeScale(1.2, 1.2, 1);
@@ -105,11 +119,17 @@
                        [NSValue valueWithCATransform3D:CATransform3DIdentity],
                        nil]];
      
+     [group setAnimations:[NSArray arrayWithObjects:
+                           opacityAnimation,
+                           bounce,
+                           nil]];
      // st the duration
-     [bounce setDuration:0.6];
+     //[bounce setDuration:0.6];
+     [group setDuration:0.6];
      
-     [[timeLabel layer] addAnimation:bounce
-                              forKey:@"bounceAnimation"];
+     //     [[timeLabel layer] addAnimation:bounce
+     //                         forKey:@"bounceAnimation"];
+     [[timeLabel layer] addAnimation:group forKey:@"opacity_and_bounce"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
