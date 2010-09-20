@@ -13,6 +13,7 @@
 
     
     IBOutlet UILabel *timeLabel;
+    IBOutlet UIButton *getTimeButton;
     NSDateFormatter *dateFormatterShort;
 }
 

@@ -134,6 +134,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super  viewWillAppear:animated];
+    
+    CABasicAnimation  *moveMe = [CABasicAnimation animationWithKeyPath:@"position"];
+    [moveMe setFromValue: [NSValue valueWithCGPoint:CGPointMake(260, [[getTimeButton layer] position].y)]];
+    [moveMe setToValue: [NSValue valueWithCGPoint:[[getTimeButton layer] position]]];
+    
+    [[getTimeButton layer] addAnimation:moveMe forKey:@"MoveButton"];
+
+
     [self showCurrentTime:nil];
 }
 
