@@ -71,6 +71,10 @@
     [timeLabel setText:[dateFormatterShort stringFromDate:now]];
     
         // Create a basic animation
+    
+    /*
+     * Create a spin animation
+     *
     CABasicAnimation *spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     
     [spin setToValue:[NSNumber numberWithFloat:(2.0 * M_PI)]];
@@ -79,6 +83,33 @@
     [spin setTimingFunction:tf];
     [spin setDelegate:self];
     [[timeLabel layer] addAnimation:spin forKey:@"spinAnimation"];
+    */
+    
+    /* 
+     * create a bounce animation
+     */
+    CAKeyframeAnimation *bounce = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    
+        // Create the values it will pass through
+    CATransform3D forward = CATransform3DMakeScale(1.3, 1.3, 1);
+    CATransform3D back = CATransform3DMakeScale(0.7, 0.7, 1);
+    CATransform3D forward2 = CATransform3DMakeScale(1.2, 1.2, 1);
+    CATransform3D back2 = CATransform3DMakeScale(0.9, 0.9, 1);
+    
+    [bounce setValues:[NSArray arrayWithObjects:
+                       [NSValue valueWithCATransform3D:CATransform3DIdentity],
+                       [NSValue valueWithCATransform3D:forward],
+                       [NSValue valueWithCATransform3D:back],
+                       [NSValue valueWithCATransform3D:forward2],
+                       [NSValue valueWithCATransform3D:back2],
+                       [NSValue valueWithCATransform3D:CATransform3DIdentity],
+                       nil]];
+     
+     // st the duration
+     [bounce setDuration:0.6];
+     
+     [[timeLabel layer] addAnimation:bounce
+                              forKey:@"bounceAnimation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
