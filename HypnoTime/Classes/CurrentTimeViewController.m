@@ -7,6 +7,7 @@
 //
 
 #import "CurrentTimeViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @implementation CurrentTimeViewController
@@ -56,6 +57,10 @@
 }
 */
 
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    NSLog(@"%@ finished: %d", anim, flag);
+}
+
 - (IBAction) showCurrentTime:(id)sender {
     NSDate *now = [NSDate date];
     
@@ -64,6 +69,16 @@
         [dateFormatterShort setTimeStyle:NSDateFormatterShortStyle];
     }
     [timeLabel setText:[dateFormatterShort stringFromDate:now]];
+    
+        // Create a basic animation
+    CABasicAnimation *spin = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    
+    [spin setToValue:[NSNumber numberWithFloat:(2.0 * M_PI)]];
+    [spin setDuration:1.0];
+    CAMediaTimingFunction *tf = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [spin setTimingFunction:tf];
+    [spin setDelegate:self];
+    [[timeLabel layer] addAnimation:spin forKey:@"spinAnimation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
