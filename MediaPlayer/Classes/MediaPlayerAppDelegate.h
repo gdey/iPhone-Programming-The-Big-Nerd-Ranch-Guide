@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface MediaPlayerAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     UIButton *audioButton;
+    SystemSoundID shortSound;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

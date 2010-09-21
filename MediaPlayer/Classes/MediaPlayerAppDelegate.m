@@ -18,7 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    // Override point for customization after application launch.
+
+        // Get the full path to the system sound
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"Sound12" ofType:@"aif"];
+    if (soundPath) {
+        NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+        OSStatus err = AudioServicesCreateSystemSoundID((CFURLRef)soundURL, &shortSound);
+        if (err != kAudioServicesNoError) {
+            NSLog(@"Could not load %@, error code: %d",soundURL, err);
+        }
+    }
     
     [window makeKeyAndVisible];
     
@@ -77,7 +86,8 @@
 }
 
 - (IBAction) playShortSound:(id)sender{
-    NSLog(@"Play short sound");
+    AudioServicesPlaySystemSound(shortSound);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 
