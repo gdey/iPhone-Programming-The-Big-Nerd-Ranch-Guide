@@ -17,15 +17,18 @@
     SystemSoundID shortSound;
     AVAudioPlayer *audioPlayer;
     MPMoviePlayerViewController *moviePlayer;
+    AVAudioRecorder *audioRecorder;
     
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UIButton *audioButton;
 
+
 - (IBAction) playAudioFile:(id)sender;
 - (IBAction) playVideoFile:(id)sender;
 - (IBAction) playShortSound:(id)sender;
+- (IBAction) recordAudio:(id)sender;
 
 @end
 

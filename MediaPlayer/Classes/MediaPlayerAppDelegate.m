@@ -12,6 +12,13 @@
 
 @synthesize window, audioButton;
 
+#pragma mark -
+#pragma mark Helper Functions
+
+- (NSString *)pathInTempDirctory:(NSString *)s {
+    NSString *dir = NSTemporaryDirectory();
+    return [dir stringByAppendingPathComponent:s];
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -39,7 +46,7 @@
         [audioPlayer setDelegate:self];
     }
     
-    
+        //Movie Player
     NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"Layers" ofType:@"m4v"];
     if (moviePath) {
         NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
@@ -47,6 +54,23 @@
         moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
     }
     
+    NSString *recordingPath = [self pathInTempDirctory:@"recording.ima4"];
+    if (recordingPath) {
+        NSURL *recordingURL = [NSURL fileURLWithPath:recordingPath];
+        NSLog(@"Recording at %2",recordingURL);
+        NSError *err;
+        NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithFloat: 44100.0],                 AVSampleRateKey,
+                                  [NSNumber numberWithInt: kAudioFormatAppleIMA4], AVFormatIDKey,
+                                  [NSNumber numberWithInt: 1],                         AVNumberOfChannelsKey,
+                                  [NSNumber numberWithInt: AVAudioQualityLow],         AVEncoderAudioQualityKey,
+                                  nil];
+        audioRecorder = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:settings error:&err];
+        if (!audioRecorder) {
+            NSLog(@"Got error: %@",err);
+        }
+        [audioRecorder prepareToRecord];
+    }
     [window makeKeyAndVisible];
     
     return YES;
@@ -123,10 +147,30 @@
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
+- (IBAction) recordAudio:(id)sender {
+    NSLog(@"Going to record audio");
+    if ([audioRecorder isRecording]) {
+        [sender setTitle:@"Record Audio" forState:UIControlStateNormal];
+        [audioRecorder stop];
+        NSLog(@"Playing it back");
+        AVAudioPlayer *ap = [[AVAudioPlayer alloc] initWithContentsOfURL:[audioRecorder url] error:nil];
+        [ap play];
+        [ap setDelegate:self];
+    }else {
+        [audioRecorder record];
+        [sender setTitle:@"Stop Recording" forState:UIControlStateNormal];
+    }
+    
+
+}
 #pragma mark -
 #pragma mark AVAudioFoundation Delegate Methods
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    [audioButton setTitle:@"Play Audio File" forState:UIControlStateNormal];
+    if(player == audioPlayer){
+        [audioButton setTitle:@"Play Audio File" forState:UIControlStateNormal];
+    } else {
+        [player release];
+    }
 }
 
 - (void)audioPlayerEndInterruption:(AVAudioPlayer *)player {
@@ -146,6 +190,8 @@
 - (void)dealloc {
     [moviePlayer release];
     [audioPlayer release];
+    [audioRecorder release];
+    [audioButton release];
     [window release];
     [super dealloc];
 }
