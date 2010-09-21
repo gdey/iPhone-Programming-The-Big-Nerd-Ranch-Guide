@@ -29,6 +29,15 @@
         }
     }
     
+    
+        // Audio Player
+    NSString *musicPath =[[NSBundle mainBundle] pathForResource:@"Music" ofType:@"mp3"];
+    if (musicPath) {
+        NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:nil];
+        [audioPlayer setDelegate:self];
+    }
+    
     [window makeKeyAndVisible];
     
     return YES;
@@ -79,6 +88,18 @@
 - (IBAction)playAudioFile:(id)sender {
 
     NSLog(@"Play Audio File");
+    
+    if([audioPlayer isPlaying]){
+            // Stop playing the music
+        [audioPlayer stop];
+        [sender setTitle:@"Play Audio File" forState:UIControlStateNormal];
+        
+    } else {
+        [audioPlayer play];
+        [sender setTitle:@"Stop Audio File" forState:UIControlStateNormal];
+    }
+
+    
 }
 
 - (IBAction) playVideoFile:(id)sender {
@@ -90,7 +111,15 @@
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
+#pragma mark -
+#pragma mark AVAudioFoundation Delegate Methods
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    [audioButton setTitle:@"Play Audio File" forState:UIControlStateNormal];
+}
 
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player {
+    [player play];
+}
 
 #pragma mark -
 #pragma mark Memory management
@@ -103,6 +132,7 @@
 
 
 - (void)dealloc {
+    [audioPlayer release];
     [window release];
     [super dealloc];
 }

@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface MediaPlayerAppDelegate : NSObject <UIApplicationDelegate> {
+@interface MediaPlayerAppDelegate : NSObject <AVAudioPlayerDelegate, UIApplicationDelegate> {
     UIWindow *window;
     UIButton *audioButton;
     SystemSoundID shortSound;
+    AVAudioPlayer *audioPlayer;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
