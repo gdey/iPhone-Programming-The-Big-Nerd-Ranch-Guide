@@ -34,8 +34,17 @@
     NSString *musicPath =[[NSBundle mainBundle] pathForResource:@"Music" ofType:@"mp3"];
     if (musicPath) {
         NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
+        
         audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:nil];
         [audioPlayer setDelegate:self];
+    }
+    
+    
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"Layers" ofType:@"m4v"];
+    if (moviePath) {
+        NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
+        NSLog(@"Movie at %@",movieURL);
+        moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
     }
     
     [window makeKeyAndVisible];
@@ -104,6 +113,9 @@
 
 - (IBAction) playVideoFile:(id)sender {
     NSLog(@"Play video file");
+        //[[moviePlayer view] setFrame:[[self window] bounds]];
+        //[[self window] addSubview:[moviePlayer view]];
+    [[moviePlayer moviePlayer] play];
 }
 
 - (IBAction) playShortSound:(id)sender{
@@ -132,6 +144,7 @@
 
 
 - (void)dealloc {
+    [moviePlayer release];
     [audioPlayer release];
     [window release];
     [super dealloc];

@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MediaPlayerAppDelegate : NSObject <AVAudioPlayerDelegate, UIApplicationDelegate> {
     UIWindow *window;
     UIButton *audioButton;
     SystemSoundID shortSound;
     AVAudioPlayer *audioPlayer;
+    MPMoviePlayerViewController *moviePlayer;
     
 }
 

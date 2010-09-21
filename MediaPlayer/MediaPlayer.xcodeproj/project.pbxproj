@@ -18,6 +18,7 @@
 		7A42ABF912485B7A0048C14A /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A42ABF612485B7A0048C14A /* Music.mp3 */; };
 		7A42ABFA12485B7A0048C14A /* Layers.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7A42ABF712485B7A0048C14A /* Layers.m4v */; };
 		7A42AC0612485E890048C14A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A42AC0512485E890048C14A /* AVFoundation.framework */; };
+		7A42AC171248625D0048C14A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A42AC161248625D0048C14A /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		7A42ABF612485B7A0048C14A /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
 		7A42ABF712485B7A0048C14A /* Layers.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Layers.m4v; sourceTree = "<group>"; };
 		7A42AC0512485E890048C14A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7A42AC161248625D0048C14A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* MediaPlayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MediaPlayer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +50,7 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				7A42ABE712485AF30048C14A /* AudioToolbox.framework in Frameworks */,
 				7A42AC0612485E890048C14A /* AVFoundation.framework in Frameworks */,
+				7A42AC171248625D0048C14A /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				7A42AC0512485E890048C14A /* AVFoundation.framework */,
+				7A42AC161248625D0048C14A /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
