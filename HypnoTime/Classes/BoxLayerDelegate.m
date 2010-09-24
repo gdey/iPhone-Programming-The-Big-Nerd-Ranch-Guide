@@ -11,8 +11,10 @@
 
 @implementation BoxLayerDelegate
 
-- (id) init {
+@synthesize degree;
 
+- (id) init {
+    degree = 20.0;
     if (self = [super init]) {
         layerImage = [[UIImage imageNamed:@"Hypno.png"] retain];
     }
@@ -22,7 +24,9 @@
 - (void)drawLayer:(CALayer *)boxLayer inContext:(CGContextRef)ctx {
 
 
-   
+    
+    
+    
     float y = [boxLayer position].y;
     float maxy = [[boxLayer superlayer] position].y + [[boxLayer superlayer] bounds].size.height;
     NSLog(@"Asked to draw. Y:%f -- MaxY: %f -- opc: %f",y,maxy, (y > 42)?1-y/maxy:1);
@@ -33,6 +37,7 @@
         CGContextSetAlpha(ctx, 1);
     }
     CGContextDrawImage(ctx, boundingBox, [layerImage CGImage]);
+    
 }
 
 

@@ -16,6 +16,7 @@
     UIColor *stripeColor;
     CALayer *boxLayer;
     BoxLayerDelegate *boxLayerDelegate;
+    CGFloat degrees;
 }
 
 

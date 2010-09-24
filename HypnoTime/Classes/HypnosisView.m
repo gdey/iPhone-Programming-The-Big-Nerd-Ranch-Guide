@@ -18,6 +18,7 @@
         // Initialization code
         xShift = 0.0;
         yShift = 0.0;
+        degrees = 0.0;
         [self setStripeColor:[UIColor lightGrayColor]];
             // Create a new layer object;
         boxLayer = [[CALayer alloc] init];
@@ -54,7 +55,9 @@
     UITouch *t = [touches anyObject];
     CGPoint p = [t locationInView:self];
     [boxLayer setPosition:p];
-        [boxLayer setNeedsDisplay];
+    degrees += 20.0;
+    [boxLayer setTransform:CATransform3DMakeRotation(degrees, 0.0, 0.0, 1.0)];
+    [boxLayer setNeedsDisplay];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -64,7 +67,7 @@
     [CATransaction setValue: [NSNumber numberWithBool:YES] 
                     forKey: kCATransactionDisableActions];
     [boxLayer setPosition:p];
-        [boxLayer setNeedsDisplay];
+    [boxLayer setNeedsDisplay];
     [CATransaction commit];
 }
 

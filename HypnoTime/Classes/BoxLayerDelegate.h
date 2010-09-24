@@ -14,6 +14,8 @@
     UIImage *layerImage;
 }
 
+@property (nonatomic) float degree;
+
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx;
 
 @end
